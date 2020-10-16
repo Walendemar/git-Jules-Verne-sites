@@ -1,0 +1,70 @@
+body {
+    font-family: "RobotoSlab", "Arial";
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.content {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.header {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: cadetblue;
+    height: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &__logo {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: brown;
+
+        & img {
+            width: 50px;
+            height: 50px;
+        }
+
+        &__text p{
+            font-size: 24px;
+            color: white;
+            margin-left: 5px;
+        }
+    
+    }
+
+    &__nav__ul{
+
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        background-color: darkblue;
+        padding-inline-start: 0;
+
+        li {
+            color: white;
+
+            &:first-child {
+                margin: 0;
+            }
+
+        }
+
+        li ~ li {
+            margin-left: 10px;
+        }
+    }
+}
+
+
+
