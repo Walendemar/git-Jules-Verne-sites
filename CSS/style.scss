@@ -3,68 +3,117 @@ body {
 }
 
 .wrapper {
+    
+    margin: 0;
     min-height: 100%;
     overflow: hidden;
+
+    &__intro {
+        margin: 0;
+        background-image: url("file:///Users/vladimir/Documents/git-Jules-Verne-site/img/jp-valery-594443-unsplash.jpg");
+        background-size: 100% 900px;
+    }
 }
 
-.content {
+.content__intro {
+
     max-width: 1140px;
     margin: 0 auto;
-}
 
-.header {
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: cadetblue;
-    height: 80px;
-    padding-left: 10px;
-    padding-right: 10px;
-
-    &__logo {
+    .header {
 
         display: flex;
         flex-direction: row;
         align-items: center;
-        background-color: brown;
+        justify-content: space-between;
+        height: 80px;
+        padding-left: 10px;
+        padding-right: 10px;
 
-        & img {
-            width: 50px;
-            height: 50px;
-        }
+        &__logo {
 
-        &__text p{
-            font-size: 24px;
-            color: white;
-            margin-left: 5px;
-        }
-    
-    }
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: brown;
 
-    &__nav__ul{
-
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        background-color: darkblue;
-        padding-inline-start: 0;
-
-        li {
-            color: white;
-
-            &:first-child {
-                margin: 0;
+            & img {
+                width: 50px;
+                height: 50px;
             }
 
+            &__text p{
+                font-size: 24px;
+                color: white;
+                margin-left: 5px;
+            }
+        
         }
 
-        li ~ li {
-            margin-left: 10px;
+        &__nav__ul{
+
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            background-color: darkblue;
+            padding-inline-start: 0;
+
+            li {
+                color: white;
+
+                &:first-child {
+                    margin: 0;
+                }
+
+            }
+
+            li ~ li {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .intro {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 820px;
+
+        &__textblock {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 750px;
+
+            p {
+                text-align: center;
+                color: white;
+                
+                font-weight: bold;
+
+                &:first-child {
+                    font-size: 42px;
+                    margin-bottom: 13px;
+                }
+
+                &:last-child {
+                    margin-top: 25px;
+                    font-size: 22px;
+                }
+
+            }
+
+            &__line {
+                width: 500px;
+                height: 10px;
+                background-color: white;
+                border-radius: 6px;
+            }
         }
     }
 }
-
+  
 
 

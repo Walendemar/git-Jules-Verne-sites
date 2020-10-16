@@ -3,53 +3,88 @@ body {
 }
 
 .wrapper {
+  margin: 0;
   min-height: 100%;
   overflow: hidden;
 }
+.wrapper__intro {
+  margin: 0;
+  background-image: url("file:///Users/vladimir/Documents/git-Jules-Verne-site/img/jp-valery-594443-unsplash.jpg");
+  background-size: 100% 900px;
+}
 
-.content {
+.content__intro {
   max-width: 1140px;
   margin: 0 auto;
 }
-
-.header {
+.content__intro .header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: cadetblue;
   height: 80px;
   padding-left: 10px;
   padding-right: 10px;
 }
-.header__logo {
+.content__intro .header__logo {
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: brown;
 }
-.header__logo img {
+.content__intro .header__logo img {
   width: 50px;
   height: 50px;
 }
-.header__logo__text p {
+.content__intro .header__logo__text p {
   font-size: 24px;
   color: white;
   margin-left: 5px;
 }
-.header__nav__ul {
+.content__intro .header__nav__ul {
   display: flex;
   flex-direction: row;
   list-style: none;
   background-color: darkblue;
   padding-inline-start: 0;
 }
-.header__nav__ul li {
+.content__intro .header__nav__ul li {
   color: white;
 }
-.header__nav__ul li:first-child {
+.content__intro .header__nav__ul li:first-child {
   margin: 0;
 }
-.header__nav__ul li ~ li {
+.content__intro .header__nav__ul li ~ li {
   margin-left: 10px;
+}
+.content__intro .intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 820px;
+}
+.content__intro .intro__textblock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 750px;
+}
+.content__intro .intro__textblock p {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.content__intro .intro__textblock p:first-child {
+  font-size: 42px;
+  margin-bottom: 13px;
+}
+.content__intro .intro__textblock p:last-child {
+  margin-top: 25px;
+  font-size: 22px;
+}
+.content__intro .intro__textblock__line {
+  width: 500px;
+  height: 10px;
+  background-color: white;
+  border-radius: 6px;
 }
