@@ -9,7 +9,7 @@ body {
 }
 .wrapper__intro {
   margin: 0;
-  background-image: url("file:///Users/vladimir/Documents/git-Jules-Verne-site/img/jp-valery-594443-unsplash.jpg");
+  background-image: url("file:///Users/vladimir/Documents/git-Jules-Verne-site/img/jp-valery-594443-unsplash.png");
   background-size: 100% 900px;
 }
 
@@ -30,7 +30,6 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: brown;
 }
 .content__intro .header__logo img {
   width: 50px;
@@ -45,7 +44,6 @@ body {
   display: flex;
   flex-direction: row;
   list-style: none;
-  background-color: darkblue;
   padding-inline-start: 0;
 }
 .content__intro .header__nav__ul li {
