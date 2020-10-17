@@ -56,20 +56,30 @@ body {
             display: flex;
             flex-direction: row;
             list-style: none;
-            padding-inline-start: 0;
+            padding-inline-start: 0;  
+            height: 80px;
 
             li {
-                font-size: 16px;
+                font-size: 18px;
                 color: white;
+                align-items: center;             
+                padding: 0 12.5px;
+                display: flex;
 
                 &:first-child {
                     margin: 0;
                 }
 
+                &:hover {
+                    background-color: rgb(254, 146, 0);
+                    color: black;
+                }
             }
 
-            li ~ li {
-                margin-left: 25px;
+            img {
+                width: 13px;
+                height: 13px;
+                margin-right: 3px;
             }
         }
     }

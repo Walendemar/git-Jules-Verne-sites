@@ -47,16 +47,26 @@ body {
   flex-direction: row;
   list-style: none;
   padding-inline-start: 0;
+  height: 80px;
 }
 .content__intro .header__nav__ul li {
-  font-size: 16px;
+  font-size: 18px;
   color: white;
+  align-items: center;
+  padding: 0 12.5px;
+  display: flex;
 }
 .content__intro .header__nav__ul li:first-child {
   margin: 0;
 }
-.content__intro .header__nav__ul li ~ li {
-  margin-left: 25px;
+.content__intro .header__nav__ul li:hover {
+  background-color: #fe9200;
+  color: black;
+}
+.content__intro .header__nav__ul img {
+  width: 13px;
+  height: 13px;
+  margin-right: 3px;
 }
 .content__intro .intro {
   display: flex;
