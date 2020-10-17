@@ -49,13 +49,14 @@ body {
   padding-inline-start: 0;
 }
 .content__intro .header__nav__ul li {
+  font-size: 16px;
   color: white;
 }
 .content__intro .header__nav__ul li:first-child {
   margin: 0;
 }
 .content__intro .header__nav__ul li ~ li {
-  margin-left: 10px;
+  margin-left: 25px;
 }
 .content__intro .intro {
   display: flex;
@@ -63,6 +64,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 580px;
+  margin: 0;
 }
 .content__intro .intro__textblock {
   display: flex;
@@ -78,6 +80,7 @@ body {
 }
 .content__intro .intro__textblock p:first-child {
   font-size: 34px;
+  margin-top: 0px;
   margin-bottom: 13px;
 }
 .content__intro .intro__textblock p:last-child {

@@ -59,6 +59,7 @@ body {
             padding-inline-start: 0;
 
             li {
+                font-size: 16px;
                 color: white;
 
                 &:first-child {
@@ -68,7 +69,7 @@ body {
             }
 
             li ~ li {
-                margin-left: 10px;
+                margin-left: 25px;
             }
         }
     }
@@ -80,6 +81,7 @@ body {
         align-items: center;
         justify-content: center;
         height: 580px;
+        margin: 0;
 
         &__textblock {
 
@@ -97,6 +99,7 @@ body {
 
                 &:first-child {
                     font-size: 34px;
+                    margin-top: 0px;
                     margin-bottom: 13px;
                 }
 
