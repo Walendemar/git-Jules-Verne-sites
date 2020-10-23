@@ -19,6 +19,10 @@ body {
     }
 }
 
+input, button {
+        outline-style: none;
+}
+
 .content__intro {
 
     max-width: 840px;
@@ -106,7 +110,6 @@ body {
             p {
                 text-align: center;
                 color: white;
-                
                 font-weight: bold;
 
                 &:first-child {

@@ -16,6 +16,10 @@ body {
   background-size: 100% 900px;
 }
 
+input, button {
+  outline-style: none;
+}
+
 .content__intro {
   max-width: 840px;
   margin: 0 auto;
