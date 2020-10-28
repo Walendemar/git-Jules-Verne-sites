@@ -6,6 +6,28 @@ body {
     padding: 0;
 }
 
+.h1 {
+    font-size: 36px;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+.h3 {
+    font-size: 18px;
+    color: rgb(150, 147, 147);
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+p {
+    margin: 2px 0 0 0;
+}
+
+input, button {
+    outline-style: none;
+}
+
 .wrapper {
     
     margin: 0;
@@ -15,18 +37,29 @@ body {
     &__intro {
         margin: 0;
         background-image: url("file:///Users/vladimir/Documents/git-Jules-Verne-site/img/jp-valery-594443-unsplash.png");
-        background-size: 100% 900px;
+        background-size: 100% 885px;
+        box-shadow: 0 5px 5px rgba(0,0,0, 0.50);
+        margin-bottom: 10px;
     }
-}
 
-input, button {
-        outline-style: none;
+    &__main {
+
+        display: flex;
+        justify-content: center;
+        
+        .wrapper__about_us {
+            background-color: white;
+        }
+
+    }
+
 }
 
 .content__intro {
 
     max-width: 840px;
     margin: 0 auto;
+    
 
     .header {
 
@@ -155,10 +188,83 @@ input, button {
                 padding: 15px 50px;
                 border-radius: 25px;
                 background-color: rgb(254, 146, 0);
+
+                &:hover {
+                    background-color: rgb(255, 211, 119);
+                }
             }
         }
     }
 }
   
+.main {
 
+
+    &__about_us {
+
+        max-width: 840px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 25px;
+        padding-bottom: 35px;
+
+        &__content {
+
+            display: flex;
+            flex-direction: row;
+            margin-top: 35px;
+
+            &__pane {
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                margin-right: 20px;
+
+                &__element {
+
+                    display: flex;
+                    flex-direction: row;
+
+                    &__text {
+
+                        span {
+                            font-weight: bold;
+                            font-size: 16px;
+                        }
+
+                        p {
+                            font-size: 12px;
+                            color: rgb(150, 147, 147);
+                        }
+                        
+                    }
+
+                    &__img img {
+                        width: 60px;
+                        height: 60px;
+                        margin-right: 20px;
+                    }
+
+                }
+
+            }
+
+            &__img {
+
+                margin-left: 20px;
+
+                img {
+                    width: 400px;
+                    height: 300px;
+                }
+            }
+
+        }
+
+    }
+
+    
+
+}
 

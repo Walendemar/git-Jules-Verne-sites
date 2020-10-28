@@ -5,6 +5,28 @@ body {
   padding: 0;
 }
 
+.h1 {
+  font-size: 36px;
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+}
+
+.h3 {
+  font-size: 18px;
+  color: #969393;
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+
+p {
+  margin: 2px 0 0 0;
+}
+
+input, button {
+  outline-style: none;
+}
+
 .wrapper {
   margin: 0;
   min-height: 100%;
@@ -13,11 +35,16 @@ body {
 .wrapper__intro {
   margin: 0;
   background-image: url("file:///Users/vladimir/Documents/git-Jules-Verne-site/img/jp-valery-594443-unsplash.png");
-  background-size: 100% 900px;
+  background-size: 100% 885px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
 }
-
-input, button {
-  outline-style: none;
+.wrapper__main {
+  display: flex;
+  justify-content: center;
+}
+.wrapper__main .wrapper__about_us {
+  background-color: white;
 }
 
 .content__intro {
@@ -128,4 +155,50 @@ input, button {
   padding: 15px 50px;
   border-radius: 25px;
   background-color: #fe9200;
+}
+.content__intro .intro__form_input_button:hover {
+  background-color: #ffd377;
+}
+
+.main__about_us {
+  max-width: 840px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+  padding-bottom: 35px;
+}
+.main__about_us__content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 35px;
+}
+.main__about_us__content__pane {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 20px;
+}
+.main__about_us__content__pane__element {
+  display: flex;
+  flex-direction: row;
+}
+.main__about_us__content__pane__element__text span {
+  font-weight: bold;
+  font-size: 16px;
+}
+.main__about_us__content__pane__element__text p {
+  font-size: 12px;
+  color: #969393;
+}
+.main__about_us__content__pane__element__img img {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+.main__about_us__content__img {
+  margin-left: 20px;
+}
+.main__about_us__content__img img {
+  width: 400px;
+  height: 300px;
 }
