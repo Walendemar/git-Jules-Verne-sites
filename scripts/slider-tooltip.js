@@ -55,6 +55,7 @@ window.addEventListener('scroll', function onScroll() {
     if (!isVisible && showTimerId) {
         // Тогда обнуляем его
         clearTimeout(showTimerId);
+        clearTimeout(deleteTimerId);
         showTimerId = null;
         deleteTimerId = null;
     }
@@ -99,16 +100,3 @@ window.addEventListener('scroll', function onScroll() {
         tooltip.style.opacity = '0';
     }
 });
-
-
-// Подсказок выводится почему-то просто миллион
-// А если пролистнули, то не сработает. Фигня. Переделать
-
-// Необходимо улучшить условие
-// Придумать условие для видимости
-// Добавлю пикселей в верхний край, пожалуй
-
-// А вообще охуенная идея попробовать сделать версию со скроллом
-
-// В нижний тоже добавил. Не знаю, как это будет выглядеть в обычной версии
-// Условие что-то совсем мне не нравится
