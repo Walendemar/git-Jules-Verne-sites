@@ -52,13 +52,18 @@ body {
     border-top: 20px solid white;
 }
 
-
 p {
     margin: 2px 0 0 0;
 }
 
-input, button {
+input {
     outline-style: none;
+    border-style: none;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 ul {
@@ -66,6 +71,7 @@ ul {
 }
 
 button {
+    outline-style: none;
     border-style: none;
     font-weight: bold;
     font-size: 20px;
@@ -75,6 +81,11 @@ button {
     &:hover {
         background-color: rgb(255, 211, 119);
     }
+}
+
+.button {
+    width: 250px;
+    height: 55px;
 }
 
 .wrapper {
@@ -106,6 +117,13 @@ button {
             background-color: rgb(238, 238, 238);
             display: flex;
             justify-content: center;
+        }
+
+        &__finder {
+            
+            display: flex;
+            justify-content: center;
+            background-image: url("file:///Users/vladimir/Documents/git-Jules-Verne-site/img/book_and_compas.jpeg");
         }
     }
 
@@ -236,8 +254,8 @@ button {
                 height: 50px;
                 font-size: 16px;
                 border-radius: 25px;
-                border-style: none;
                 padding-left: 40px;
+                padding-right: 40px;
                 margin: 45px 0 35px 0;
             }
 
@@ -461,15 +479,58 @@ button {
                         padding-left: 9px;
                     }
                 }
-
-                .button {
-                    width: 250px;
-                    height: 55px;
-                }
             }
         }
     }
     
+    &__finder {
+        
+        display: flex;
+        justify-content: center;
+        width: 840px;
+        height: 700px;
+        color: white;
+        
+        .heading {
+            font-size: 36px;
+        }
 
+        &__content {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &__text {
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &__form__input {
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .line {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 840px;
+                    margin-top: 40px;
+                }
+
+                .line + .line {
+                    margin-bottom: 40px;
+                }
+
+                .input {
+                    width: 300px;
+                }
+            }
+        }
+    }
 }
 

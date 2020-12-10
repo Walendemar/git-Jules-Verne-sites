@@ -55,8 +55,14 @@ p {
   margin: 2px 0 0 0;
 }
 
-input, button {
+input {
   outline-style: none;
+  border-style: none;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 25px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 ul {
@@ -64,6 +70,7 @@ ul {
 }
 
 button {
+  outline-style: none;
   border-style: none;
   font-weight: bold;
   font-size: 20px;
@@ -72,6 +79,11 @@ button {
 }
 button:hover {
   background-color: #ffd377;
+}
+
+.button {
+  width: 250px;
+  height: 55px;
 }
 
 .wrapper {
@@ -95,6 +107,11 @@ button:hover {
   background-color: #eeeeee;
   display: flex;
   justify-content: center;
+}
+.wrapper__main__finder {
+  display: flex;
+  justify-content: center;
+  background-image: url("file:///Users/vladimir/Documents/git-Jules-Verne-site/img/book_and_compas.jpeg");
 }
 
 .content__intro {
@@ -196,8 +213,8 @@ button:hover {
   height: 50px;
   font-size: 16px;
   border-radius: 25px;
-  border-style: none;
   padding-left: 40px;
+  padding-right: 40px;
   margin: 45px 0 35px 0;
 }
 .content__intro .intro__form_input_button {
@@ -363,7 +380,41 @@ button:hover {
   padding-top: 3px;
   padding-left: 9px;
 }
-.main__price__content__buttons .button {
-  width: 250px;
-  height: 55px;
+.main__finder {
+  display: flex;
+  justify-content: center;
+  width: 840px;
+  height: 700px;
+  color: white;
+}
+.main__finder .heading {
+  font-size: 36px;
+}
+.main__finder__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main__finder__content__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__finder__content__form__input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__finder__content__form__input .line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 840px;
+  margin-top: 40px;
+}
+.main__finder__content__form__input .line + .line {
+  margin-bottom: 40px;
+}
+.main__finder__content__form__input .input {
+  width: 300px;
 }
