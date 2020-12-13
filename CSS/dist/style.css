@@ -67,6 +67,7 @@ input {
 
 ul {
   padding-inline-start: 0;
+  list-style: none;
 }
 
 button {
@@ -84,6 +85,12 @@ button:hover {
 .button {
   width: 250px;
   height: 55px;
+}
+
+.arrow {
+  display: block;
+  min-width: 30px;
+  height: 30px;
 }
 
 .wrapper {
@@ -112,6 +119,11 @@ button:hover {
   display: flex;
   justify-content: center;
   background-image: url("file:///Users/vladimir/Documents/git-Jules-Verne-site/img/book_and_compas.jpeg");
+}
+.wrapper__main__newbook {
+  display: flex;
+  justify-content: center;
+  background-color: white;
 }
 
 .content__intro {
@@ -144,7 +156,6 @@ button:hover {
 .content__intro .header__nav__ul {
   display: flex;
   flex-direction: row;
-  list-style: none;
   padding-inline-start: 0;
   height: 80px;
 }
@@ -288,11 +299,11 @@ button:hover {
   overflow: hidden;
 }
 .main__price__content__slider__zone {
-  width: 2000px;
+  width: 2500px;
   display: flex;
   flex-direction: row;
   margin-top: 70px;
-  transition: margin-left 300ms;
+  transition: margin-left 750ms;
 }
 .main__price__content__slider__zone li:first-child {
   margin-left: 15px;
@@ -365,12 +376,6 @@ button:hover {
   align-items: center;
   margin-top: 70px;
 }
-.main__price__content__buttons .arrow {
-  display: block;
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-}
 .main__price__content__buttons .arrow.left {
   margin-right: 15px;
   padding-right: 9px;
@@ -417,4 +422,85 @@ button:hover {
 }
 .main__finder__content__form__input .input {
   width: 300px;
+}
+.main__newbook {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  max-width: 840px;
+  padding-top: 35px;
+  padding-bottom: 70px;
+}
+.main__newbook__slider {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  align-items: center;
+  max-width: 840px;
+  margin-bottom: 10px;
+}
+.main__newbook__slider__ul {
+  display: flex;
+  flex-direction: row;
+  width: 6000px;
+  transition: margin-left 750ms;
+}
+.main__newbook__slider__ul__li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 840px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.main__newbook__slider__ul .pane {
+  min-width: 270px;
+  min-height: 320px;
+  margin-left: 15px;
+  border: 3px solid black;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px grey;
+}
+.main__newbook__slider__ul .pane img {
+  margin-left: 60px;
+  margin-top: 60px;
+}
+.main__newbook__slider__ul .pane.selected {
+  border: 3px solid #fe9200;
+  box-shadow: 0 0 15px #fe9200;
+}
+.main__newbook__slider__ul .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-left: 35px;
+  line-height: 25px;
+}
+.main__newbook__slider__ul .text .about {
+  color: gray;
+  text-decoration: underline;
+}
+.main__newbook__slider__ul .text .description {
+  margin-top: 20px;
+}
+.main__newbook__slider__ul .text .book_price {
+  color: #fe9200;
+}
+.main__newbook__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.main__newbook__button .arrow.toleft {
+  margin-right: 15px;
+  padding-right: 9px;
+}
+.main__newbook__button .arrow.toright {
+  margin-left: 15px;
+  padding-top: 3px;
+  padding-left: 9px;
 }

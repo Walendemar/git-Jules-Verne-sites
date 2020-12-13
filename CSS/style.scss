@@ -68,6 +68,7 @@ input {
 
 ul {
     padding-inline-start: 0;
+    list-style: none;
 }
 
 button {
@@ -86,6 +87,12 @@ button {
 .button {
     width: 250px;
     height: 55px;
+}
+
+.arrow {
+    display: block;
+    min-width: 30px;
+    height: 30px;
 }
 
 .wrapper {
@@ -124,6 +131,13 @@ button {
             display: flex;
             justify-content: center;
             background-image: url("file:///Users/vladimir/Documents/git-Jules-Verne-site/img/book_and_compas.jpeg");
+        }
+
+        &__newbook {
+
+            display: flex;
+            justify-content: center;
+            background-color: white;
         }
     }
 
@@ -168,7 +182,6 @@ button {
 
             display: flex;
             flex-direction: row;
-            list-style: none;
             padding-inline-start: 0;  
             height: 80px;
 
@@ -363,11 +376,11 @@ button {
 
                 &__zone {
 
-                    width: 2000px;
+                    width: 2500px;
                     display: flex;
                     flex-direction: row;
                     margin-top: 70px;
-                    transition: margin-left 300ms;
+                    transition: margin-left 750ms;
                     
                     li:first-child {
                         margin-left: 15px;
@@ -462,12 +475,7 @@ button {
                 margin-top: 70px;
 
                 .arrow {
-                    display: block;
-                    width: 30px;
-                    height: 30px;
-                    font-size: 20px;
-                    
-                    
+                                 
                     &.left {
                         margin-right: 15px;
                         padding-right: 9px;
@@ -531,6 +539,109 @@ button {
                 }
             }
         }
+    }
+
+    &__newbook {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        max-width: 840px;
+        padding-top: 35px;
+        padding-bottom: 70px;
+
+        &__slider {
+
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            align-items: center;
+            max-width: 840px;
+            margin-bottom: 10px;
+
+            &__ul {
+
+                display: flex;
+                flex-direction: row;
+                width: 6000px;
+                transition: margin-left 750ms;
+
+                &__li {
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    min-width: 840px;
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                }
+
+                .pane {
+                    min-width: 270px;
+                    min-height: 320px;
+                    margin-left: 15px;
+                    border: 3px solid black;
+                    background-color: white;
+                    border-radius: 5px;
+                    box-shadow: 5px 5px 5px grey;
+
+                    img {
+                        margin-left: 60px;
+                        margin-top: 60px;
+                    }
+
+                    &.selected {
+                        border: 3px solid rgb(254, 146, 0);
+                        box-shadow: 0 0 15px rgb(254, 146, 0);
+                    }
+                }
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    box-sizing: border-box;
+                    margin-left: 35px;
+                    line-height: 25px;
+                    
+
+                    .about {
+                        color: gray;
+                        text-decoration: underline;
+                    }
+
+                    .description {
+                        margin-top: 20px;
+                    }
+
+                    .book_price {
+                        color: #fe9200;
+                    }
+                }
+            }
+        }
+
+
+        &__button {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .arrow.toleft {
+                margin-right: 15px;
+                padding-right: 9px;
+            }
+
+            .arrow.toright {
+                margin-left: 15px;
+                padding-top: 3px;
+                padding-left: 9px;
+            }
+        }
+
     }
 }
 
