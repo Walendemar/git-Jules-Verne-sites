@@ -1,5 +1,3 @@
-// Подсказку можно было реализовать проще, но для демонстрации я сделал так
-
 // Выбираю всю часть слайдера
 let sliderPrice = document.getElementById('mainPrice');
 // id таймера для вывода подсказки
@@ -35,7 +33,6 @@ window.addEventListener('scroll', function onScroll() {
             deleteTooltip();
         }
     }
-
 
     // Убираем подсказку, если она есть, после клика по панелям
     ul.onclick = function(event) {
