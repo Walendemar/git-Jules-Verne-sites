@@ -1,10 +1,13 @@
 let liCartImg = document.getElementById('liCartImg');
 let img = document.getElementById('iconCart');
 
-liCartImg.onmouseover = function() {
+liCartImg.addEventListener('mouseover', mouseOver);
+liCartImg.addEventListener('mouseleave', mouseLeave);
+
+function mouseOver() {
     img.setAttribute('src', 'icons/CartBlack.png');
 }
 
-liCartImg.onmouseleave = function() {
-    img.setAttribute('src', 'icons/Cart.png')
+function mouseLeave() {
+    img.setAttribute('src', 'icons/Cart.png');
 }
