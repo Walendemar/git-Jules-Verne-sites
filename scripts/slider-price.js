@@ -71,7 +71,6 @@ function onClick(event) {
         return;
     }
 
-    console.log('!');
     //Меняем обводку и цвет тени
     event.target.closest(`.${pane}`).classList.toggle('selected');
 
