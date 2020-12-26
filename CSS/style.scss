@@ -18,6 +18,24 @@ a {
     font-weight: bold;
 }
 
+.logo {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        & img {
+            width: 50px;
+            height: 50px;
+        }
+
+        &__text p {
+            font-size: 24px;
+            color: white;
+            margin-left: 5px;
+        }
+}
+
 .h3 {
     font-size: 18px;
     color: rgb(150, 147, 147);
@@ -177,25 +195,6 @@ button {
         height: 80px;
         padding-left: 10px;
         padding-right: 10px;
-
-        &__logo {
-
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-            & img {
-                width: 50px;
-                height: 50px;
-            }
-
-            &__text p {
-                font-size: 24px;
-                color: white;
-                margin-left: 5px;
-            }
-        
-        }
 
         &__nav__ul{
 
@@ -724,26 +723,6 @@ button {
     justify-content: space-between;
     align-items: center;
     min-height: 250px;
-
-    &__logo {
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        min-width: 200px;
-
-        & img {
-            width: 50px;
-            height: 50px;
-        }
-
-        &__text p {
-            font-size: 24px;
-            color: white;
-            margin-left: 5px;
-        }
-    
-    }
 
     &__social {
 
