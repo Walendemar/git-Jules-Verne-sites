@@ -1,13 +1,10 @@
-function changeImgBlack() {
-    let element = document.getElementById('li_cart_img');
-    let img = element.querySelector('img');
-    img.setAttribute('src', 'icons/CartBlack.png')
-    console.log(img);
+let liCartImg = document.getElementById('liCartImg');
+let img = document.getElementById('iconCart');
+
+liCartImg.onmouseover = function() {
+    img.setAttribute('src', 'icons/CartBlack.png');
 }
 
-function changeImgWhite() {
-    let element = document.getElementById('li_cart_img');
-    let img = element.querySelector('img');
+liCartImg.onmouseleave = function() {
     img.setAttribute('src', 'icons/Cart.png')
-    console.log(img);
 }
