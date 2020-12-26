@@ -1,3 +1,4 @@
+// Подключаем шрифты
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 body {
@@ -139,8 +140,21 @@ button {
             justify-content: center;
             background-color: white;
         }
+
+        &__contacts {
+
+            display: flex;
+            justify-content: center;
+            background-color: rgb(238, 238, 238);
+        }
     }
 
+    &__footer {
+        background-image: url("file:///Users/vladimir/Documents/git-Jules-Verne-site/img/footer_background.jpg");
+        background-size: 100% 250px;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .content__intro {
@@ -643,5 +657,127 @@ button {
         }
 
     }
+
+    &__contacts {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        max-width: 840px;
+        padding-top: 35px;
+        padding-bottom: 70px;
+
+        &__content {
+
+            display: flex;
+            flex-direction: row;
+            margin-top: 70px;
+            margin-bottom: 70px;
+
+            &__tablet {
+                
+                max-width: 450px;
+                max-height: 300px;
+                margin-right: 50px;
+                box-shadow: 0 5px 5px rgba(0,0,0, 0.50);
+                border-radius: 22px;
+
+                .map {
+                    position: relative;
+                    top: -288px;
+                    left: 52px;
+                }
+            }
+
+            &__text {
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .text_section + .text_section {
+                    margin-top: 10px;
+                }
+
+                .orange_font {
+                    color: #fe9200;
+                }
+
+            }
+        }
+    }
 }
 
+.footer {
+
+    display: flex;
+    flex-direction: row;
+    min-width: 840px;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 250px;
+
+    &__logo {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        min-width: 200px;
+
+        & img {
+            width: 50px;
+            height: 50px;
+        }
+
+        &__text p {
+            font-size: 24px;
+            color: white;
+            margin-left: 5px;
+        }
+    
+    }
+
+    &__social {
+
+        &__text {
+
+            margin-bottom: 25px;
+            
+            .text {
+                font-size: 20px;
+                color: white;
+            }
+        }
+
+        &__icons {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            .img {
+                width: 42px;
+                height: 42px;
+            }
+        }
+    }
+
+    &__button {
+
+        margin-left: 57px;
+
+        .up_button {
+
+            width: 42px;
+            height: 42px;
+            background-color: white;
+        
+            p {
+                margin-top: 8px;
+                font-size: 30px;
+            }
+        }
+    }
+}

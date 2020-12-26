@@ -125,6 +125,17 @@ button:hover {
   justify-content: center;
   background-color: white;
 }
+.wrapper__main__contacts {
+  display: flex;
+  justify-content: center;
+  background-color: #eeeeee;
+}
+.wrapper__footer {
+  background-image: url("file:///Users/vladimir/Documents/git-Jules-Verne-site/img/footer_background.jpg");
+  background-size: 100% 250px;
+  display: flex;
+  justify-content: center;
+}
 
 .content__intro {
   max-width: 840px;
@@ -503,4 +514,95 @@ button:hover {
   margin-left: 15px;
   padding-top: 3px;
   padding-left: 9px;
+}
+.main__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  max-width: 840px;
+  padding-top: 35px;
+  padding-bottom: 70px;
+}
+.main__contacts__content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.main__contacts__content__tablet {
+  max-width: 450px;
+  max-height: 300px;
+  margin-right: 50px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 22px;
+}
+.main__contacts__content__tablet .map {
+  position: relative;
+  top: -288px;
+  left: 52px;
+}
+.main__contacts__content__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main__contacts__content__text .text_section + .text_section {
+  margin-top: 10px;
+}
+.main__contacts__content__text .orange_font {
+  color: #fe9200;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  min-width: 840px;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 250px;
+}
+.footer__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 200px;
+}
+.footer__logo img {
+  width: 50px;
+  height: 50px;
+}
+.footer__logo__text p {
+  font-size: 24px;
+  color: white;
+  margin-left: 5px;
+}
+.footer__social__text {
+  margin-bottom: 25px;
+}
+.footer__social__text .text {
+  font-size: 20px;
+  color: white;
+}
+.footer__social__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footer__social__icons .img {
+  width: 42px;
+  height: 42px;
+}
+.footer__button {
+  margin-left: 57px;
+}
+.footer__button .up_button {
+  width: 42px;
+  height: 42px;
+  background-color: white;
+}
+.footer__button .up_button p {
+  margin-top: 8px;
+  font-size: 30px;
 }
