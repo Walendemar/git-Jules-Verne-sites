@@ -21,23 +21,20 @@ window.addEventListener('scroll', function onScroll() {
     if (isShow) {
         // Убираем все обработчики
         this.removeEventListener('scroll', onScroll);
-        buttonsZone.onclick = null;
-        ul.onclick = null;
+        buttonsZone.removeEventListener('click', deleteTooltip);
+        ul.removeEventListener('click', deleteTooltip);
         return;
     }
 
-    // Берем buttonsZone и ul из скрипта slider-arrow-button.js
-    // Убираем подсказку, если она есть, после клика по стрелкам
-    buttonsZone.onclick = function(event) {
-        if (event.target.classList.contains('arrow') && tooltip) {
-            deleteTooltip();
-        }
-    }
+    // Берем buttonsZone и ul из скрипта slider-arrow-buttons.js
+    // Добаляем обработчики
+    buttonsZone.addEventListener('click', deleteTooltip);
+    ul.addEventListener('click', deleteTooltip);
 
-    // Убираем подсказку, если она есть, после клика по панелям
-    ul.onclick = function(event) {
-        if (tooltip) {
-            deleteTooltip();
+    // Убираем подсказку, если она есть, после клика по стрелкам
+    function deleteTooltip(event) {
+        if (event.target.classList.contains('arrow') && tooltip) {
+            tooltip.style.opacity = '0';
         }
     }
     
@@ -90,10 +87,5 @@ window.addEventListener('scroll', function onScroll() {
         tooltip.style.left = coordX + 'px';
         tooltip.style.top = coordY + 'px';
         tooltip.style.opacity = '1';
-    }
-
-    // Удаление подсказки
-    function deleteTooltip() {
-        tooltip.style.opacity = '0';
     }
 });
