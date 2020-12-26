@@ -101,6 +101,7 @@ button {
     font-size: 20px;
     border-radius: 30px;
     background-color: rgb(254, 146, 0);
+    cursor: pointer;
 
     &:hover {
         background-color: rgb(255, 211, 119);
@@ -110,7 +111,6 @@ button {
 .button {
     width: 250px;
     height: 55px;
-    cursor: pointer;
 }
 
 .arrow {
