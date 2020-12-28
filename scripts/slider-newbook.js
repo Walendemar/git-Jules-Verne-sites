@@ -28,7 +28,7 @@ function ulClick(event) {
     div.classList.toggle('selected');
 
     // Меняем текст кнопки
-    switchText(div.classList.contains('selected'));
+    switchText(div.classList.contains('selected'), buttonsPane.querySelector('.button'));
 }
 
 // Функция для обработчика buttonsPane
@@ -36,20 +36,22 @@ function buttonClick(event) {
 
     // Текущий div с картинкой
     let div = newbookUl.children[panePosition].children[0];
+    // Кнопка "Добавить"
+    let button = buttonsPane.querySelector('.button')
 
     // Если клик по левой кнопке
     if (event.target.classList.contains('toleft') && panePosition > 0) {
         panePosition--;
         let prevDiv = newbookUl.children[panePosition].children[0];
         // Меняем текст кнопки в зависимости от наличия подсветки
-        switchText(prevDiv.classList.contains('selected'));
+        switchText(prevDiv.classList.contains('selected'), button);
     }
 
     // Если клик по правой кнопке
     if (event.target.classList.contains('toright') && panePosition < elementsCount-1) {
         panePosition++;
         let nextDiv = newbookUl.children[panePosition].children[0];
-        switchText(nextDiv.classList.contains('selected'));
+        switchText(nextDiv.classList.contains('selected'), button);
     }
     
     // Если по кнопке добавить
@@ -57,17 +59,12 @@ function buttonClick(event) {
         // Добавляю div'у с картинкой класс, меняющий подсветку и рамки
         div.classList.toggle('selected');
         // Меняю текст кнопки
-        switchText(div.classList.contains('selected') ? true : false);
+        switchText(div.classList.contains('selected'), button);
     }
 
     // Двигаем слайдер
     newbookUl.style.marginLeft = -panePosition * 840 + 'px';
 
-    // Функция замены текста на кнопке
-    function switchText(status) {
-        buttonsPane.querySelector('.button').innerHTML = status ? "УБРАТЬ" : "ДОБАВИТЬ";
-    }
-    
 }
 
 
