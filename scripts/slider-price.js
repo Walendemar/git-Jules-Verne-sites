@@ -1,10 +1,10 @@
 let sliderZone = document.getElementById('sliderPrice');
 
-//Для упрощения названия классов
+// Для упрощения названия классов
 let pane = "main__price__content__slider__pane";
 let text = "main__price__content__slider__pane__text";
 
-//Создаем якорь
+// Создаем якорь
 let anchor;
 
 sliderZone.addEventListener('mouseover', onMouseOver);
@@ -14,12 +14,12 @@ sliderZone.addEventListener('click', onClick)
 
 function onMouseOver(event) {
 
-    //Если якорь на прошлой панеле был, но по какой-то причине класс не поставился
+    // Если якорь на прошлой панеле был, но по какой-то причине класс не поставился
     if (anchor && anchor != event.target.closest(`.${pane}`)) {
         anchor.lastElementChild.classList.add('hidden');
     }
     
-    //Если мышь с неизвестного элемента
+    // Если мышь с неизвестного элемента
     if (!event.relatedTarget) return;
 
     // Если мышь не на панеле или не на элементе внутри
@@ -27,7 +27,7 @@ function onMouseOver(event) {
         return;
     }
 
-    //Запоминаем текущую панель
+    // Запоминаем текущую панель
     anchor = event.target.closest(`.${pane}`);
 
     // Удаляем класс у текстовой части, что показать ее
@@ -47,7 +47,7 @@ function onMouseOut(event) {
         return;
     }
     
-    //  Добавляем класс к тексту, чтобы скрыть его
+    // Добавляем класс к тексту, чтобы скрыть его
     anchor.lastElementChild.classList.add('hidden');
 
     // Текущего элемента больше нет
@@ -66,12 +66,19 @@ function onMouseMove(event) {
 
 function onClick(event) {
 
+    let target = event.target.closest(`.${pane}`);
+    
     // Если клик был не по панеле
-    if (!event.target.closest(`.${pane}`)) {
+    if (!target) {
         return;
     }
 
-    //Меняем обводку и цвет тени
-    event.target.closest(`.${pane}`).classList.toggle('selected');
+    // Меняем обводку и цвет тени
+    target.classList.toggle('selected');
 
+    // Меняем текст кнопки в зависимости от того, по какому элементу был клик
+    // Функция берется из slider-arrow-buttons.js
+    if (target == ul.children[position+1]) {
+        switchText(target.classList.contains('selected'), buttonsZone.querySelector('.button'));
+    }
 }
