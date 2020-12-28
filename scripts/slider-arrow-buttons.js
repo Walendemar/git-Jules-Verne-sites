@@ -11,27 +11,52 @@ let position = 0;
 let elementCount = ul.querySelectorAll('li').length;
 
 function onClick(event) {
-    // Проверяем, было ли нажатие именно на кнопку-стрелку
-    if (!event.target.classList.contains('arrow')) {
+
+    // Проверяем, было ли нажатие на кнопку-стрелку или "добавить"
+    if (!event.target.closest('button')) {
         return;
     }
+
+    // Кнопка "Добавить"
+    let button = buttonsZone.querySelector('.button');
+
+    // Если клик по "Добавить"
+    if (event.target.classList.contains('button')) {
+        switchText(!ul.children[position+1].classList.contains('selected'), button);
+        ul.children[position+1].classList.toggle('selected');
+    }
     
-    // Если клик по левой
+    // Если клик по левой стрелке
     if (event.target.classList.contains('left')) {
-        if (position < 1) {
+        if (position < 0) {
             return;
         }
+        
+        if (position >= 0) {
+            // Если левый элемент выделен (и он есть), меняем текст кнопки
+            switchText(ul.children[position].classList.contains('selected'), button);
+        }
+
         position--;
     }
 
-    // Если клик по правой
+    // Если клик по правой стрелке
     if (event.target.classList.contains('right')) {
-        if (position > elementCount - 4) {
+        if (position > elementCount - 3) {
             return;
         }
+
+        if (position <= elementCount-2 && position >= -2) {
+            // Если правый элемент выделен (и он есть), меняем текст кнопки
+            switchText(ul.children[position+2].classList.contains('selected'), button);
+        }
+
         position++;
     }
 
     // Двигаем слайдер
     ul.style.marginLeft = -position * 280 + 'px';
+
 }
+
+
