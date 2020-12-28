@@ -8,6 +8,7 @@ form.addEventListener('submit', submit);
 
 // Функция-хендлер
 function submit(event) {
+    
     // Предотвращаем отправку формы
     event.preventDefault();
 
