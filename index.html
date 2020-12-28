@@ -217,12 +217,12 @@
                                 <form class="main__finder__content__form">
                                     <div class="main__finder__content__form__input">
                                         <div class="line">
-                                            <input class="input" placeholder="Ваше имя">
-                                            <input class="input" placeholder="Ваш e-mail">
+                                            <input class="input" type="text" placeholder="Ваше имя" required>
+                                            <input class="input" type="email" placeholder="Ваш e-mail" required>
                                         </div>
                                         <div class="line">
-                                            <input class="input" placeholder="Имя автора">
-                                            <input class="input" placeholder="Название книги">
+                                            <input class="input" type="text" placeholder="Имя автора" required>
+                                            <input class="input" type="text" placeholder="Название книги" required>
                                         </div>
                                         <button class="button">ОТПРАВИТЬ</button>
                                     </div>
@@ -365,6 +365,7 @@
             </div>
         </div>
     </body>
+    <script src="scripts/handlers.js"></script>
     <script src="scripts/hover-script.js"></script>
     <script src="scripts/slider-price.js"></script>
     <script src="scripts/slider-arrow-buttons.js"></script>
