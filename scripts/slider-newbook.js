@@ -62,10 +62,13 @@ function buttonClick(event) {
 
     // Двигаем слайдер
     newbookUl.style.marginLeft = -panePosition * 840 + 'px';
+
+    // Функция замены текста на кнопке
+    function switchText(status) {
+        buttonsPane.querySelector('.button').innerHTML = status ? "УБРАТЬ" : "ДОБАВИТЬ";
+    }
+    
 }
 
-// Функция замены текста на кнопке
-function switchText(status) {
-    buttonsPane.querySelector('.button').innerHTML = status ? "УБРАТЬ" : "ДОБАВИТЬ";
-}
+
 
