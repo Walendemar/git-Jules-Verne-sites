@@ -28,7 +28,7 @@ function ulClick(event) {
     div.classList.toggle('selected');
 
     // Меняем текст кнопки
-    switchText(div.classList.contains('selected') ? true : false);
+    switchText(div.classList.contains('selected'));
 }
 
 // Функция для обработчика buttonsPane
@@ -42,14 +42,14 @@ function buttonClick(event) {
         panePosition--;
         let prevDiv = newbookUl.children[panePosition].children[0];
         // Меняем текст кнопки в зависимости от наличия подсветки
-        switchText(prevDiv.classList.contains('selected') ? true : false);
+        switchText(prevDiv.classList.contains('selected'));
     }
 
     // Если клик по правой кнопке
     if (event.target.classList.contains('toright') && panePosition < elementsCount-1) {
         panePosition++;
         let nextDiv = newbookUl.children[panePosition].children[0];
-        switchText(nextDiv.classList.contains('selected') ? true : false);
+        switchText(nextDiv.classList.contains('selected'));
     }
     
     // Если по кнопке добавить
