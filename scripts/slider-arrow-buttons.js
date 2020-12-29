@@ -22,7 +22,11 @@ function onClick(event) {
 
     // Если клик по "Добавить"
     if (event.target.classList.contains('button')) {
+        // Меняем текст
         switchText(!ul.children[position+1].classList.contains('selected'), button);
+        // Меняем цвет курсора
+        switchCursorColor(!ul.children[position+1].classList.contains('selected'), cursor);
+        // Меняем класс
         ul.children[position+1].classList.toggle('selected');
     }
     
@@ -33,8 +37,10 @@ function onClick(event) {
         }
         
         if (position >= 0) {
-            // Если левый элемент выделен (и он есть), меняем текст кнопки
+            // Меняем текст кнопки
             switchText(ul.children[position].classList.contains('selected'), button);
+            // Меняем цвет курсора
+            switchCursorColor(ul.children[position].classList.contains('selected'), cursor);
         }
 
         position--;
@@ -47,8 +53,10 @@ function onClick(event) {
         }
 
         if (position <= elementCount-2 && position >= -2) {
-            // Если правый элемент выделен (и он есть), меняем текст кнопки
+            // Меняем текст кнопки
             switchText(ul.children[position+2].classList.contains('selected'), button);
+            // Меняем цвет курсора
+            switchCursorColor(ul.children[position+2].classList.contains('selected'), cursor);
         }
 
         position++;

@@ -1,4 +1,5 @@
 let sliderZone = document.getElementById('sliderPrice');
+let cursor = document.getElementById('sliderCursor');
 
 // Для упрощения названия классов
 let pane = "main__price__content__slider__pane";
@@ -76,9 +77,12 @@ function onClick(event) {
     // Меняем обводку и цвет тени
     target.classList.toggle('selected');
 
-    // Меняем текст кнопки в зависимости от того, по какому элементу был клик
-    // Функция берется из slider-arrow-buttons.js
+    // Меняем цвет курсора
+    
+
+    // Меняем текст кнопки и цвет курсора в зависимости от того, по какому элементу был клик
     if (target == ul.children[position+1]) {
         switchText(target.classList.contains('selected'), buttonsZone.querySelector('.button'));
+        switchCursorColor(target.classList.contains('selected'), cursor);
     }
 }
