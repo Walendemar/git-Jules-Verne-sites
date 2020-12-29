@@ -425,12 +425,23 @@ button {
 
                 overflow: hidden;
 
+                &__cursor {
+
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 20px;
+                    
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    } 
+                }
+
                 &__zone {
 
                     width: 2500px;
                     display: flex;
                     flex-direction: row;
-                    margin-top: 70px;
                     transition: margin-left 750ms;
                     
                     li:first-child {

@@ -346,11 +346,19 @@ button:hover {
 .main__price__content__slider {
   overflow: hidden;
 }
+.main__price__content__slider__cursor {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.main__price__content__slider__cursor img {
+  width: 40px;
+  height: 40px;
+}
 .main__price__content__slider__zone {
   width: 2500px;
   display: flex;
   flex-direction: row;
-  margin-top: 70px;
   transition: margin-left 750ms;
 }
 .main__price__content__slider__zone li:first-child {
