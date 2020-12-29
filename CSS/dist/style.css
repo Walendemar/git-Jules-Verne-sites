@@ -361,6 +361,9 @@ button:hover {
   flex-direction: row;
   transition: margin-left 750ms;
 }
+.main__price__content__slider__zone li {
+  cursor: pointer;
+}
 .main__price__content__slider__zone li:first-child {
   margin-left: 15px;
 }
@@ -519,6 +522,7 @@ button:hover {
   background-color: white;
   border-radius: 5px;
   box-shadow: 5px 5px 5px grey;
+  cursor: pointer;
 }
 .main__newbook__slider__ul .pane img {
   margin-left: 60px;

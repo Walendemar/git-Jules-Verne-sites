@@ -443,6 +443,10 @@ button {
                     display: flex;
                     flex-direction: row;
                     transition: margin-left 750ms;
+
+                    li {
+                        cursor: pointer;
+                    }
                     
                     li:first-child {
                         margin-left: 15px;
@@ -648,6 +652,7 @@ button {
                     background-color: white;
                     border-radius: 5px;
                     box-shadow: 5px 5px 5px grey;
+                    cursor: pointer;
 
                     img {
                         margin-left: 60px;
