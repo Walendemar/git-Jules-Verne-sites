@@ -31,13 +31,6 @@ window.addEventListener('scroll', function onScroll() {
     buttonsZone.addEventListener('click', deleteTooltip);
     ul.addEventListener('click', deleteTooltip);
 
-    // Убираем подсказку, если она есть, после клика по стрелкам
-    function deleteTooltip(event) {
-        if (event.target.classList.contains('arrow') && tooltip) {
-            tooltip.style.opacity = '0';
-        }
-    }
-    
     // Мы в зоне видимости, а таймер еще не запущен?
     if (isVisible && !showTimerId) {
         // Запускаем таймер
@@ -87,5 +80,12 @@ window.addEventListener('scroll', function onScroll() {
         tooltip.style.left = coordX + 'px';
         tooltip.style.top = coordY + 'px';
         tooltip.style.opacity = '1';
+    }
+
+    // Убираем подсказку, если она есть, после клика по стрелкам
+    function deleteTooltip(event) {
+        if (tooltip) {
+            tooltip.style.opacity = '0';
+        }
     }
 });
