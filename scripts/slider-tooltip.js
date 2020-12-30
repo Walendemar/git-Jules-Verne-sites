@@ -1,5 +1,5 @@
 // Выбираю всю часть слайдера
-let sliderPrice = document.getElementById('mainPrice');
+let price = document.getElementById('price');
 // id таймера для вывода подсказки
 let showTimerId = null;
 // id таймера для удаления сообщения
@@ -13,7 +13,7 @@ let tooltip = null;
 window.addEventListener('scroll', function onScroll() {
     
     // Для удобства создаю переменную с информацией о панеле
-    let sliderInfo = sliderPrice.getBoundingClientRect();
+    let sliderInfo = price.getBoundingClientRect();
     // Выносим условие в отдельную переменную
     let isVisible = sliderInfo.top < 100 && sliderInfo.top > -sliderInfo.height + 200 && true;
 
