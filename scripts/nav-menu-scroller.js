@@ -19,31 +19,27 @@ function scrollMenu(event) {
             position = document.getElementById('aboutUs')
                                 .getBoundingClientRect()
                                 .top;
-            console.log(position);
             timerId = setInterval(() => scrollTo(timerId, position-15, 10, 1), 5);
             break;
         case navPanel.children[1]:
-            // ""
+            // "Каталог"
             position = document.getElementById('price')
                                .getBoundingClientRect()
                                .top;
-            console.log(position);
             timerId = setInterval(() => scrollTo(timerId, position-27, 20, 1), 10);
             break;
         case navPanel.children[2]:
-            // ""
+            // "Новинки"
             position = document.getElementById('newbook')
                                .getBoundingClientRect()
                                .top;
-            console.log(position);
             timerId = setInterval(() => scrollTo(timerId, position-30, 30, 1), 10);
             break;
         case navPanel.children[3]:
-            // ""
+            // "Контакты"
             position = document.getElementById('contacts')
                                .getBoundingClientRect()
                                .top;
-            console.log(position);
             timerId = setInterval(() => scrollTo(timerId, position-70, 40, 1), 10);
             break;
     }
