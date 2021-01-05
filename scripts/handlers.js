@@ -6,7 +6,7 @@ function switchText(status, button) {
 // Функция замены цвета указателя
 function switchCursorColor(status, cursor) {
     
-    cursor.src = status ?  'icons/cursor-orange.png' : 'icons/cursor.png';
+    cursor.src = status ? 'icons/cursor-orange.png' : 'icons/cursor.png';
     cursor.classList.toggle('changed');
 }
 
@@ -26,4 +26,11 @@ function scrollTo(timerId, position, speed, direction) {
     if (windowPosition <= -position && direction > 0) {
         clearInterval(timerId);
     }
+}
+
+// Функция-парсер, принимающая строку и возвращающая массив слов
+function parse(string) {
+    let array = string.split(' ');
+
+    return array.filter( (item) => item !== "");
 }
