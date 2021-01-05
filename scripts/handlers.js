@@ -21,10 +21,12 @@ function scrollTo(timerId, position, speed, direction) {
 
     if (windowPosition >= position && direction < 0) {
         clearInterval(timerId);
+        timerId = null;
     }
 
     if (windowPosition <= -position && direction > 0) {
         clearInterval(timerId);
+        timerId = null;
     }
 }
 
@@ -32,5 +34,11 @@ function scrollTo(timerId, position, speed, direction) {
 function parse(string) {
     let array = string.split(' ');
 
-    return array.filter( (item) => item !== "");
+    array.filter( (item) => item !== "");
+
+    array.map( (item) => {
+        if (item[length-1] == ",") item.slice(0, length-2)
+    });
+
+    return array;
 }
