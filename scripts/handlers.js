@@ -21,24 +21,25 @@ function scrollTo(timerId, position, speed, direction) {
 
     if (windowPosition >= position && direction < 0) {
         clearInterval(timerId);
-        timerId = null;
+        return true;
     }
 
     if (windowPosition <= -position && direction > 0) {
         clearInterval(timerId);
-        timerId = null;
+        return true;
     }
 }
 
-// Функция-парсер, принимающая строку и возвращающая массив слов
+// Функция-парсер, принимающая строку, обрабатывающая ее и возвращающая массив слов
 function parse(string) {
+
+    string = string.toLowerCase();
+
     let array = string.split(' ');
 
     array.filter( (item) => item !== "");
 
-    array.map( (item) => {
-        if (item[length-1] == ",") item.slice(0, length-2)
-    });
-
-    return array;
+    return array.map( (item) => 
+        item[item.length-1] == "," || item[item.length-1] == "!" ? item.substr(0, item.length-1) : item
+    );
 }
