@@ -77,9 +77,6 @@ function onClick(event) {
     // Меняем обводку и цвет тени
     target.classList.toggle('selected');
 
-    // Меняем цвет курсора
-    
-
     // Меняем текст кнопки и цвет курсора в зависимости от того, по какому элементу был клик
     if (target == ul.children[position+1]) {
         switchText(target.classList.contains('selected'), buttonsZone.querySelector('.button'));
