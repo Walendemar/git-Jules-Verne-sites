@@ -29,6 +29,9 @@ function ulClick(event) {
 
     // Меняем текст кнопки
     switchText(div.classList.contains('selected'), buttonsPane.querySelector('.button'));
+
+    // Выделение li как выбранного
+    event.target.closest('.main__newbook__slider__ul__li').classList.toggle('selected');
 }
 
 // Функция для обработчика buttonsPane
@@ -58,6 +61,8 @@ function buttonClick(event) {
     if (event.target.classList.contains('button')) {
         // Добавляю div'у с картинкой класс, меняющий подсветку и рамки
         div.classList.toggle('selected');
+        // Выделение li как выбранного
+        div.closest('.main__newbook__slider__ul__li').classList.toggle('selected');
         // Меняю текст кнопки
         switchText(div.classList.contains('selected'), button);
     }
