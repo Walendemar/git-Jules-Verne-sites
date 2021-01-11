@@ -36,6 +36,139 @@ a {
         }
 }
 
+.shop {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 1100px;
+    height: 650px;
+    border-radius: 30px;
+    background-color: white;
+
+    &__heading {
+        margin-top: 20px;
+    }
+
+    &__content {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 900px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        &__list {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 500px;
+            height: 400px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 3px solid black;
+            border-radius: 15px;
+            overflow: auto;
+            background-color: rgb(238, 238, 238);
+
+            ul {
+                margin-top: 0;
+            }
+
+            &__element {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                position: relative;
+                width: 350px;
+                height: 150px;
+                margin-top: 20px;
+                border: 2px solid black;
+                border-radius: 7.5px;
+                background-color: white;
+                
+                &__img_container {
+
+                    height: min-content;
+                    margin-left: 20px;
+                    margin-right: 40px;
+
+                    img {
+                        width: 70px;
+                        height: 90px;
+                    }
+                }
+
+                &__text_container {
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    width: 250px;
+                    margin-right: 20px;
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+
+                .close_button {
+                    position: absolute;
+                    top: -12px;
+                    right: -12px;
+                    width: 24px;
+                    height: 24px;
+                    background-color: rgb(254, 146, 0);
+                }
+            }
+        }
+
+        &__price {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 400px;
+            margin-left: 30px;
+
+            p {
+                font-size: 28px;
+            }
+
+            p + p {
+                margin-bottom: 28px;
+            }
+
+            label {
+                font-size: 24px;
+            }
+
+            select {
+                margin-top: 12px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__button {
+
+        margin-bottom: 30px;
+    }
+
+    .close_frame {
+        width: 42px;
+        height: 42px;
+        position: absolute;
+    }
+}
+
 .show_frame {
     background-color: black;
     opacity: 0.7;
@@ -670,7 +803,7 @@ button {
                     flex-direction: column;
                     justify-content: center;
                     box-sizing: border-box;
-                    margin-left: 35px;
+                    margin-left: 50px;
                     line-height: 25px;
                     
 

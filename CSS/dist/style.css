@@ -31,6 +31,114 @@ a {
   margin-left: 5px;
 }
 
+.shop {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 1100px;
+  height: 650px;
+  border-radius: 30px;
+  background-color: white;
+}
+.shop__heading {
+  margin-top: 20px;
+}
+.shop__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 900px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.shop__content__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 500px;
+  height: 400px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 3px solid black;
+  border-radius: 15px;
+  overflow: auto;
+  background-color: #eeeeee;
+}
+.shop__content__list ul {
+  margin-top: 0;
+}
+.shop__content__list__element {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 350px;
+  height: 150px;
+  margin-top: 20px;
+  border: 2px solid black;
+  border-radius: 7.5px;
+  background-color: white;
+}
+.shop__content__list__element__img_container {
+  height: min-content;
+  margin-left: 20px;
+  margin-right: 40px;
+}
+.shop__content__list__element__img_container img {
+  width: 70px;
+  height: 90px;
+}
+.shop__content__list__element__text_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 250px;
+  margin-right: 20px;
+}
+.shop__content__list__element__text_container p {
+  font-size: 14px;
+}
+.shop__content__list__element .close_button {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 24px;
+  height: 24px;
+  background-color: #fe9200;
+}
+.shop__content__price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  margin-left: 30px;
+}
+.shop__content__price p {
+  font-size: 28px;
+}
+.shop__content__price p + p {
+  margin-bottom: 28px;
+}
+.shop__content__price label {
+  font-size: 24px;
+}
+.shop__content__price select {
+  margin-top: 12px;
+  font-size: 20px;
+}
+.shop__button {
+  margin-bottom: 30px;
+}
+.shop .close_frame {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+}
+
 .show_frame {
   background-color: black;
   opacity: 0.7;
@@ -537,7 +645,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  margin-left: 35px;
+  margin-left: 50px;
   line-height: 25px;
 }
 .main__newbook__slider__ul .text .about {
