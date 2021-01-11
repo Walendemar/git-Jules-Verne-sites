@@ -46,7 +46,6 @@ function submit(event) {
 
         // При клике удаляем
         button.addEventListener('click', function() {
-            console.log('!');
             frame.remove();
             div.remove();
             document.body.style.overflow = "";
@@ -58,8 +57,8 @@ function submit(event) {
         div.after(frame);
 
         // Вычисление координат
-        frame.style.left = window.pageXOffset + document.documentElement.clientWidth/2 - 320 + 'px';
-        frame.style.top = window.pageYOffset + document.documentElement.clientHeight/2 - 150 + 'px';
+        frame.style.left = window.pageXOffset + document.documentElement.clientWidth/2 - frame.offsetWidth/2 + 'px';
+        frame.style.top = window.pageYOffset + document.documentElement.clientHeight/2 - frame.offsetHeight/2 + 'px';
     }
 }
 
