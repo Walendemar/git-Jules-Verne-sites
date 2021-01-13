@@ -15,16 +15,32 @@ function switchCursorColor(status, cursor) {
 // speed - скорость перемещения
 // direction - направление движения экрана
 function scrollTo(timerId, position, speed, direction) {
-    let windowPosition = document.body.getBoundingClientRect().top;
+    let windowPosition = document.body.getBoundingClientRect();
+    let documentHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+      );
+
+    console.log(windowPosition.bottom);
+    // console.log('window: ', document.documentElement.clientHeight);
+    // console.log('document: ', document.body.offsetHeight);
+    // console.log('different: ', documentHeight);
 
     window.scrollBy(0, speed * direction);
 
-    if (windowPosition >= position && direction < 0) {
+    if (windowPosition.top >= position && direction < 0) {
         clearInterval(timerId);
         return true;
     }
 
-    if (windowPosition <= -position && direction > 0) {
+    if (windowPosition.top <= -position && direction > 0) {
+        clearInterval(timerId);
+        return true;
+    }
+
+    // Если экран достиг конца страницы
+    if (windowPosition.bottom <= document.documentElement.clientHeight + 10 && position !== 0) {
         clearInterval(timerId);
         return true;
     }
