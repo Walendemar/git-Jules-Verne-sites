@@ -870,10 +870,11 @@ button {
                 box-shadow: 0 5px 5px rgba(0,0,0, 0.50);
                 border-radius: 22px;
 
-                .map {
+                iframe {
                     position: relative;
                     top: -288px;
                     left: 52px;
+                    border: none;
                 }
             }
 

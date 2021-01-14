@@ -695,10 +695,11 @@ button:hover {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   border-radius: 22px;
 }
-.main__contacts__content__tablet .map {
+.main__contacts__content__tablet iframe {
   position: relative;
   top: -288px;
   left: 52px;
+  border: none;
 }
 .main__contacts__content__text {
   display: flex;
