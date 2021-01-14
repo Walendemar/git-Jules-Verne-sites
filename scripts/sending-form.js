@@ -47,7 +47,7 @@ function submit(event) {
         // При клике удаляем
         button.addEventListener('click', function() {
             frame.remove();
-            div.remove();
+            div.classList.remove('show_background');
             document.body.style.overflow = "";
         });
 
