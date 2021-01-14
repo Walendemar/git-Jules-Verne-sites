@@ -26,7 +26,7 @@ function showShoppingCart(event) {
     let wrapper = document.getElementById('wrapper');
 
     // Затемнение экрана
-    div.classList.add('show_frame');
+    div.classList.add('show_background');
     wrapper.before(div); 
 
     // Создание модального окна
