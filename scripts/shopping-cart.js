@@ -177,7 +177,7 @@ function showShoppingCart(event) {
     closeButton.addEventListener('click', function() {
         frame.remove();
         document.body.style.overflow = "";
-        div.classList.remove('show_frame');
+        div.classList.remove('show_background');
     });
 
     // Позиционирование фрейма
