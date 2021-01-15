@@ -27,7 +27,8 @@ function scrollTo(timerId, position, speed, direction) {
     }
 
     // При подходе к позиции необходимо снизить скорость
-    let minDistance = windowPosition.top - position * -direction;
+    let minDistance = Math.abs(Math.abs(windowPosition.top) - Math.abs(position));
+    console.log(minDistance);
 
     if (minDistance < 60) {
         speed = 10;
