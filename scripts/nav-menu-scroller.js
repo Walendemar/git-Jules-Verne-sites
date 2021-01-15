@@ -26,21 +26,21 @@ function scrollMenu(event) {
             // "Каталог"
             position = document.getElementById('price')
                                .getBoundingClientRect()
-                               .top - 26;
+                               .top;
             timerId = setInterval(() => scrollTo(timerId, position + scrollY, 20, 1), 10);
             break;
         case navPanel.children[2]:
             // "Новинки"
             position = document.getElementById('newbook')
                                .getBoundingClientRect()
-                               .top - 30;
+                               .top;
             timerId = setInterval(() => scrollTo(timerId, position + scrollY, 30, 1), 10);
             break;
         case navPanel.children[3]:
             // "Контакты"
             position = document.getElementById('contacts')
                                .getBoundingClientRect()
-                               .top - 55;
+                               .top;
             timerId = setInterval(() => scrollTo(timerId, position + scrollY, 40, 1), 10);
             break;
     }
