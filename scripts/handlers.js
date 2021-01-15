@@ -5,7 +5,6 @@ function switchText(status, button) {
 
 // Функция замены цвета указателя
 function switchCursorColor(status, cursor) {
-    
     cursor.src = status ? 'icons/cursor-orange.png' : 'icons/cursor.png';
     cursor.classList.toggle('changed');
 }
@@ -22,19 +21,34 @@ function scrollTo(timerId, position, speed, direction) {
         document.body.clientHeight, document.documentElement.clientHeight
       );
 
-    console.log(windowPosition.bottom);
-    // console.log('window: ', document.documentElement.clientHeight);
-    // console.log('document: ', document.body.offsetHeight);
-    // console.log('different: ', documentHeight);
+    // Если направление не совпадает с позициями элементов
+    if (windowPosition.top <= -position && direction > 0) {
+        direction = -1;
+    }
+    
+    // При подходе к позиции необходимо снизить скорость
+    let minDistance = Math.abs(windowPosition.top) - position * -direction;
+
+    if (minDistance < 50) {
+        speed = 10;
+        if (minDistance < 10) {
+            speed = 1;
+        }
+    }
 
     window.scrollBy(0, speed * direction);
-
+    
     if (windowPosition.top >= position && direction < 0) {
         clearInterval(timerId);
         return true;
     }
 
     if (windowPosition.top <= -position && direction > 0) {
+        clearInterval(timerId);
+        return true;
+    }
+
+    if (windowPosition.top >= -position && direction < 0) {
         clearInterval(timerId);
         return true;
     }
@@ -58,4 +72,56 @@ function parse(string) {
     return array.map( (item) => 
         item[item.length-1] == "," || item[item.length-1] == "!" ? item.substr(0, item.length-1) : item
     );
+}
+
+// Функция для показа/скрытия хедера
+function toggleHeader(elementZone) {
+
+    let header = document.getElementById('header');
+
+    // Необходима "заглушка" на место хедера
+    let bung = document.createElement('div');
+    bung.style.height = header.offsetHeight + 'px';
+    bung.classList.add('bung');
+
+    // Обработчик для проверки
+    let timerId;
+    
+    window.addEventListener('scroll', onScroll);
+
+    timerId = setTimeout(() => hideHeader(), 9000);
+
+    // Проверка, был ли хедер уже показан
+    if (header.classList.contains('show_header')) {
+        return;
+    }
+
+    showHeader();
+
+    function onScroll() {
+        let zoneInfo = elementZone.getBoundingClientRect();
+        // Проверка на видимость секции
+        let isVisible = zoneInfo.top < 300 && zoneInfo.top > -zoneInfo.height + 200 && true;
+
+        if (!isVisible) {
+            clearInterval(timerId);
+            hideHeader();
+            window.removeEventListener('scroll', onScroll);
+        }
+    }
+
+    // Функция, показывающая хедер
+    function showHeader() {
+        header.before(bung);
+        header.classList.add('show_header');
+        setTimeout(() => header.style.marginTop = 80 + 'px', 100);
+    }
+
+    // Функция, скрывающая хедер
+    function hideHeader() {
+        header.style.marginTop = 0;
+        setTimeout(() => header.classList.remove('show_header'), 400);
+        setTimeout(() => bung.remove(), 400);
+    }
+
 }
