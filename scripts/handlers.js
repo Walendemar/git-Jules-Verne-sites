@@ -21,37 +21,28 @@ function scrollTo(timerId, position, speed, direction) {
         document.body.clientHeight, document.documentElement.clientHeight
       );
 
-    // Если направление не совпадает с позициями элементов
-    if (windowPosition.top <= -position && direction > 0) {
-        direction = -1;
+    if (Math.abs(windowPosition.top) === Math.abs(position)) {
+        clearInterval(timerId);
+        return true;
     }
-    
-    // При подходе к позиции необходимо снизить скорость
-    let minDistance = Math.abs(windowPosition.top) - position * -direction;
 
-    if (minDistance < 50) {
+    // При подходе к позиции необходимо снизить скорость
+    let minDistance = windowPosition.top - position * -direction;
+
+    if (minDistance < 60) {
         speed = 10;
-        if (minDistance < 10) {
-            speed = 1;
-        }
+    }
+
+    if (minDistance < 20) {
+        speed = 1;
+    }
+
+    // Если направление не совпадает с позициями элементов
+    if (windowPosition.top < -position && direction > 0) {
+        direction = -1;
     }
 
     window.scrollBy(0, speed * direction);
-    
-    if (windowPosition.top >= position && direction < 0) {
-        clearInterval(timerId);
-        return true;
-    }
-
-    if (windowPosition.top <= -position && direction > 0) {
-        clearInterval(timerId);
-        return true;
-    }
-
-    if (windowPosition.top >= -position && direction < 0) {
-        clearInterval(timerId);
-        return true;
-    }
 
     // Если экран достиг конца страницы
     if (windowPosition.bottom <= document.documentElement.clientHeight + 10 && position !== 0) {
