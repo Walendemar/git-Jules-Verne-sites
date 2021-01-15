@@ -28,6 +28,10 @@ function onClick(event) {
         switchCursorColor(!ul.children[position+1].classList.contains('selected'), cursor);
         // Меняем класс
         ul.children[position+1].classList.toggle('selected');
+        // // Показать/убрать хедер
+        if (ul.children[position+1].classList.contains('selected')) {
+            toggleHeader(ul.closest('section'));
+        }
     }
     
     // Если клик по левой стрелке

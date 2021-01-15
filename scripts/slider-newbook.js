@@ -32,6 +32,11 @@ function ulClick(event) {
 
     // Выделение li как выбранного
     event.target.closest('.main__newbook__slider__ul__li').classList.toggle('selected');
+
+    // Показать/убрать хедер
+    if (div.classList.contains('selected')) {
+        toggleHeader(newbookUl.closest('section'));
+    }
 }
 
 // Функция для обработчика buttonsPane
@@ -65,6 +70,10 @@ function buttonClick(event) {
         div.closest('.main__newbook__slider__ul__li').classList.toggle('selected');
         // Меняю текст кнопки
         switchText(div.classList.contains('selected'), button);
+        // Показать/убрать хедер
+        if (div.classList.contains('selected')) {
+            toggleHeader(newbookUl.closest('section'));
+        }
     }
 
     // Двигаем слайдер
