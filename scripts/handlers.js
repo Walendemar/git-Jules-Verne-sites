@@ -20,7 +20,8 @@ function scrollTo(timerId, position, speed, direction) {
         document.body.offsetHeight, document.documentElement.offsetHeight,
         document.body.clientHeight, document.documentElement.clientHeight
       );
-
+    
+    // Если экран на месте
     if (Math.abs(windowPosition.top) === Math.abs(position)) {
         clearInterval(timerId);
         return true;
@@ -45,7 +46,7 @@ function scrollTo(timerId, position, speed, direction) {
     window.scrollBy(0, speed * direction);
 
     // Если экран достиг конца страницы
-    if (windowPosition.bottom <= document.documentElement.clientHeight + 1 && position !== 0) {
+    if (windowPosition.bottom <= document.documentElement.clientHeight + 1 && direction > 0) {
         scrollBy(0, -1);
         clearInterval(timerId);
         return true;
