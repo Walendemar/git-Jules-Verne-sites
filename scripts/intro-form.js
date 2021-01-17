@@ -64,20 +64,18 @@ function onSubmit(event) {
         function scrollSlider() {
             let cursor = document.getElementById('sliderCursor');
             let button = sliderUl.closest('section').querySelector('.button');
-            let condition;
+            let condition = sliderUl.children[current].classList.contains('selected');
 
             switch(sliderUl) {
                 case ul:
                     position = current - 1;
                     ul.style.marginLeft = - (position) * 280 + 'px';
-                    condition = sliderUl.children[current].classList.contains('selected');
                     switchCursorColor(condition, cursor); 
                     switchText(condition, button);
                     break;
                 case newbookUl:
                     panePosition = current;
                     newbookUl.style.marginLeft = - (panePosition) * 840 + 'px';
-                    condition = sliderUl.children[panePosition].classList.contains('selected');
                     switchCursorColor(condition, cursor); 
                     switchText(condition, button);
                     break;
