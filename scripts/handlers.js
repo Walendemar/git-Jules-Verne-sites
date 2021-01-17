@@ -28,7 +28,6 @@ function scrollTo(timerId, position, speed, direction) {
 
     // При подходе к позиции необходимо снизить скорость
     let minDistance = Math.abs(Math.abs(windowPosition.top) - Math.abs(position));
-    console.log(minDistance);
 
     if (minDistance < 60) {
         speed = 10;
@@ -46,7 +45,8 @@ function scrollTo(timerId, position, speed, direction) {
     window.scrollBy(0, speed * direction);
 
     // Если экран достиг конца страницы
-    if (windowPosition.bottom <= document.documentElement.clientHeight + 10 && position !== 0) {
+    if (windowPosition.bottom <= document.documentElement.clientHeight + 1 && position !== 0) {
+        scrollBy(0, -1);
         clearInterval(timerId);
         return true;
     }
@@ -71,6 +71,16 @@ function toggleHeader(elementZone) {
 
     let header = document.getElementById('header');
 
+    // Виден ли хедер на своем стандартном месте
+    if (-document.body.getBoundingClientRect().top <= header.offsetHeight - 45) {
+        return;
+    }
+
+    // Проверка, был ли хедер уже показан
+    if (header.classList.contains('show_header')) {
+        return;
+    }
+
     // Необходима "заглушка" на место хедера
     let bung = document.createElement('div');
     bung.style.height = header.offsetHeight + 'px';
@@ -82,11 +92,6 @@ function toggleHeader(elementZone) {
     window.addEventListener('scroll', onScroll);
 
     timerId = setTimeout(() => hideHeader(), 9000);
-
-    // Проверка, был ли хедер уже показан
-    if (header.classList.contains('show_header')) {
-        return;
-    }
 
     showHeader();
 
