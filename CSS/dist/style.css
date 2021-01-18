@@ -50,16 +50,15 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 900px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  min-width: 900px;
+  margin: 10px;
 }
 .shop__content__list {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 500px;
+  min-width: 500px;
   height: 400px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -128,6 +127,7 @@ a {
   font-size: 24px;
 }
 .shop__content__price select {
+  display: block;
   margin-top: 12px;
   font-size: 20px;
 }
@@ -158,6 +158,7 @@ a {
   background-color: white;
   border-radius: 30px;
   position: absolute;
+  z-index: 10000;
 }
 .frame .close {
   width: 42px;
@@ -481,7 +482,7 @@ button:hover {
   width: 2500px;
   display: flex;
   flex-direction: row;
-  transition: margin-left 750ms;
+  transition: margin-left 350ms;
 }
 .main__price__content__slider__zone li {
   cursor: pointer;
@@ -762,4 +763,19 @@ button:hover {
 .footer__button .up_button p {
   margin-top: 8px;
   font-size: 30px;
+}
+
+@media (max-width: 1000px) {
+  .shop {
+    width: 900px;
+  }
+  .shop__content {
+    min-width: 800px;
+  }
+  .shop__content__list {
+    min-width: 380px;
+  }
+  .shop__content__price {
+    min-width: 200px;
+  }
 }

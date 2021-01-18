@@ -58,9 +58,8 @@ a {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        width: 900px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        min-width: 900px;
+        margin: 10px;
 
         &__list {
 
@@ -68,7 +67,7 @@ a {
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            width: 500px;
+            min-width: 500px;
             height: 400px;
             margin-top: 20px;
             margin-bottom: 20px;
@@ -152,6 +151,7 @@ a {
             }
 
             select {
+                display: block;
                 margin-top: 12px;
                 font-size: 20px;
             }
@@ -189,6 +189,7 @@ a {
     background-color: white;
     border-radius: 30px;
     position: absolute;
+    z-index: 10000;
 
     .close {
         width: 42px;
@@ -205,7 +206,6 @@ a {
     top: -80px;
     background-image: url('file:///Users/vladimir/Documents/git-Jules-Verne-site/img/book_coffee.jpg');
     background-position: bottom left;
-    //background-size: 860px 80px;
     border-radius: 0 0 10px 10px;
     z-index: 10000;
     transition-property: margin-top;
@@ -590,7 +590,7 @@ button {
                     width: 2500px;
                     display: flex;
                     flex-direction: row;
-                    transition: margin-left 750ms;
+                    transition: margin-left 350ms;
 
                     li {
                         cursor: pointer;
@@ -961,5 +961,31 @@ button {
                 font-size: 30px;
             }
         }
+    }
+}
+
+// ~~~ Media ~~~
+
+@media (max-width: 1000px) {
+    .shop {
+
+        width: 900px;
+
+        &__content {
+
+            min-width: 800px;
+
+            &__list {
+                min-width: 380px;
+            }
+
+            &__price {
+                min-width: 200px;
+            }
+        }
+    }
+
+    .frame {
+
     }
 }
