@@ -238,7 +238,7 @@ function showShoppingCart(event) {
             let condition = (element == ul.children[position+1]);
 
             if (condition) {
-                switchCursorColor(false, cursor);
+                switchCursorColor(false);
                 switchText(false, price.querySelector('.button'));
             }
 

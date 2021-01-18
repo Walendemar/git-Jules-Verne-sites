@@ -33,7 +33,7 @@ function onSubmit(event) {
                                   .top - 26;
         let timerId;
         let scrollY = window.scrollY;
-        timerId = setInterval(() => scrollTo(timerId, targetCoord + scrollY, 20, 1), 5);
+        timerId = setInterval(() => scrollTo(timerId, targetCoord + scrollY, 20), 5);
     };
 
 
@@ -53,7 +53,7 @@ function onSubmit(event) {
 
                 let scrollFunc = wrapper(scrollTo);
 
-                timerId = setInterval(() => scrollFunc(timerId, targetCoord - 26, 20, 1), 5);
+                timerId = setInterval(() => scrollFunc(timerId, targetCoord - 26, 20), 5);
                 
                 return true;
             }
@@ -70,13 +70,13 @@ function onSubmit(event) {
                 case ul:
                     position = current - 1;
                     ul.style.marginLeft = - (position) * 280 + 'px';
-                    switchCursorColor(condition, cursor); 
+                    switchCursorColor(condition); 
                     switchText(condition, button);
                     break;
                 case newbookUl:
                     panePosition = current;
                     newbookUl.style.marginLeft = - (panePosition) * 840 + 'px';
-                    switchCursorColor(condition, cursor); 
+                    switchCursorColor(condition); 
                     switchText(condition, button);
                     break;
             }

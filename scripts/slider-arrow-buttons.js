@@ -25,7 +25,7 @@ function onClick(event) {
         // Меняем текст
         switchText(!ul.children[position+1].classList.contains('selected'), button);
         // Меняем цвет курсора
-        switchCursorColor(!ul.children[position+1].classList.contains('selected'), cursor);
+        switchCursorColor(!ul.children[position+1].classList.contains('selected'));
         // Меняем класс
         ul.children[position+1].classList.toggle('selected');
         // // Показать/убрать хедер
@@ -44,7 +44,7 @@ function onClick(event) {
             // Меняем текст кнопки
             switchText(ul.children[position].classList.contains('selected'), button);
             // Меняем цвет курсора
-            switchCursorColor(ul.children[position].classList.contains('selected'), cursor);
+            switchCursorColor(ul.children[position].classList.contains('selected'));
         }
 
         position--;
@@ -60,7 +60,7 @@ function onClick(event) {
             // Меняем текст кнопки
             switchText(ul.children[position+2].classList.contains('selected'), button);
             // Меняем цвет курсора
-            switchCursorColor(ul.children[position+2].classList.contains('selected'), cursor);
+            switchCursorColor(ul.children[position+2].classList.contains('selected'));
         }
 
         position++;

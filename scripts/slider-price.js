@@ -81,7 +81,7 @@ function onClick(event) {
     // Меняем текст кнопки и цвет курсора в зависимости от того, по какому элементу был клик
     if (target == ul.children[position+1]) {
         switchText(target.classList.contains('selected'), buttonsZone.querySelector('.button'));
-        switchCursorColor(target.classList.contains('selected'), cursor);
+        switchCursorColor(target.classList.contains('selected'));
     }
 
     // Показать/убрать хедер

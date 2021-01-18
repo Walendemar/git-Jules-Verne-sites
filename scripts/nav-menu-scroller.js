@@ -20,28 +20,28 @@ function scrollMenu(event) {
             position = document.getElementById('aboutUs')
                                 .getBoundingClientRect()
                                 .top;
-            timerId = setInterval(() => scrollTo(timerId, position + scrollY, 10, 1), 5);
+            timerId = setInterval(() => scrollTo(timerId, position + scrollY, 10), 5);
             break;
         case navPanel.children[1]:
             // "Каталог"
             position = document.getElementById('price')
                                .getBoundingClientRect()
                                .top;
-            timerId = setInterval(() => scrollTo(timerId, position + scrollY, 20, 1), 10);
+            timerId = setInterval(() => scrollTo(timerId, position + scrollY, 20), 10);
             break;
         case navPanel.children[2]:
             // "Новинки"
             position = document.getElementById('newbook')
                                .getBoundingClientRect()
                                .top;
-            timerId = setInterval(() => scrollTo(timerId, position + scrollY, 30, 1), 10);
+            timerId = setInterval(() => scrollTo(timerId, position + scrollY, 30), 10);
             break;
         case navPanel.children[3]:
             // "Контакты"
             position = document.getElementById('contacts')
                                .getBoundingClientRect()
                                .top;
-            timerId = setInterval(() => scrollTo(timerId, position + scrollY, 40, 1), 10);
+            timerId = setInterval(() => scrollTo(timerId, position + scrollY, 40), 10);
             break;
     }
 }
