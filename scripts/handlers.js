@@ -4,44 +4,42 @@ function switchText(status, button) {
 }
 
 // Функция замены цвета указателя
-function switchCursorColor(status, cursor) {
-    cursor.src = status ? 'icons/cursor-orange.png' : 'icons/cursor.png';
-    cursor.classList.toggle('changed');
+function switchCursorColor(status) {
+    let sliderCursor = document.getElementById('sliderCursor');
+
+    sliderCursor.src = status ? 'icons/cursor-orange.png' : 'icons/cursor.png';
+    sliderCursor.classList.toggle('changed');
 }
 
 // Функция для прокрутки
 // position - координаты элемента
 // speed - скорость перемещения
 // direction - направление движения экрана
-function scrollTo(timerId, position, speed, direction) {
+function scrollTo(timerId, position, speed) {
     let windowPosition = document.body.getBoundingClientRect();
-    let documentHeight = Math.max(
-        document.body.scrollHeight, document.documentElement.scrollHeight,
-        document.body.offsetHeight, document.documentElement.offsetHeight,
-        document.body.clientHeight, document.documentElement.clientHeight
-      );
-    
-    // Если экран на месте
-    if (Math.abs(windowPosition.top) === Math.abs(position)) {
+
+     // Если экран на месте
+     if (Math.abs(windowPosition.top) === Math.abs(position)) {
         clearInterval(timerId);
         return true;
     }
 
+    let direction = Math.abs(windowPosition.top) > Math.abs(position) ? -1 : 1;
+    // console.log(direction);
+
     // При подходе к позиции необходимо снизить скорость
     let minDistance = Math.abs(Math.abs(windowPosition.top) - Math.abs(position));
 
-    if (minDistance < 60) {
-        speed = 10;
+    switch(true) {
+        case (minDistance <= 11):
+            speed = 1;
+            break;
+        case (minDistance <= 60):
+            speed = 10;
+            break;  
     }
 
-    if (minDistance < 20) {
-        speed = 1;
-    }
-
-    // Если направление не совпадает с позициями элементов
-    if (windowPosition.top < -position && direction > 0) {
-        direction = -1;
-    }
+    console.log(speed);
 
     window.scrollBy(0, speed * direction);
 
