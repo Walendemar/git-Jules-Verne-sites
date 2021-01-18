@@ -63,7 +63,7 @@ function parse(string) {
 }
 
 // Функция для показа/скрытия хедера
-function toggleHeader(elementZone) {
+function toggleHeader(zoneElement) {
 
     let header = document.getElementById('header');
 
@@ -92,7 +92,7 @@ function toggleHeader(elementZone) {
     showHeader();
 
     function onScroll() {
-        let zoneInfo = elementZone.getBoundingClientRect();
+        let zoneInfo = zoneElement.getBoundingClientRect();
         // Проверка на видимость секции
         let isVisible = zoneInfo.top < 300 && zoneInfo.top > -zoneInfo.height + 200 && true;
 
