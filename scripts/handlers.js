@@ -25,7 +25,6 @@ function scrollTo(timerId, position, speed) {
     }
 
     let direction = Math.abs(windowPosition.top) > Math.abs(position) ? -1 : 1;
-    // console.log(direction);
 
     // При подходе к позиции необходимо снизить скорость
     let minDistance = Math.abs(Math.abs(windowPosition.top) - Math.abs(position));
@@ -38,8 +37,6 @@ function scrollTo(timerId, position, speed) {
             speed = 10;
             break;  
     }
-
-    console.log(speed);
 
     window.scrollBy(0, speed * direction);
 
