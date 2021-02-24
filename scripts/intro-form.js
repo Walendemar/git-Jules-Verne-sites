@@ -7,7 +7,6 @@ let introButton = introForm.elements[1];
 introForm.addEventListener("submit", onSubmit);
 
 function onSubmit(event) {
-
     // Отмена отправки по умолчанию
     event.preventDefault();
     
@@ -23,7 +22,6 @@ function onSubmit(event) {
 
     // Переменная ul берется из slider-arrow-buttons.js
     // Переменная newbook из slider-newbook.js
-    
     // Поиск по слайдерам
     let result = showElement(ul) || showElement(newbookUl);
 
@@ -84,7 +82,7 @@ function onSubmit(event) {
 
         // Функция-обёртка
         function wrapper(func) {
-
+            
             return function(...args) {
                 let result = func(...args);
                 

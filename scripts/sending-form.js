@@ -8,7 +8,6 @@ form.addEventListener('submit', submit);
 
 // Функция-хендлер
 function submit(event) {
-    
     // Предотвращаем отправку формы
     event.preventDefault();
 
@@ -47,7 +46,7 @@ function submit(event) {
         // При клике удаляем
         button.addEventListener('click', function() {
             frame.remove();
-            div.classList.remove('show_background');
+            div.classList.remove('show-background');
             document.body.style.overflow = "";
         });
 

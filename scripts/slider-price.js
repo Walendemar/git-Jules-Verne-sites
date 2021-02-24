@@ -2,8 +2,8 @@ let sliderZone = document.getElementById('sliderPrice');
 let cursor = document.getElementById('sliderCursor');
 
 // Для упрощения названия классов
-let pane = "main__price__content__slider__pane";
-let text = "main__price__content__slider__pane__text";
+let pane = "book";
+let text = "book__text";
 
 // Создаем якорь
 let anchor;
@@ -14,7 +14,6 @@ sliderZone.addEventListener('mousemove', onMouseMove);
 sliderZone.addEventListener('click', onClick)
 
 function onMouseOver(event) {
-
     // Если якорь на прошлой панеле был, но по какой-то причине класс не поставился
     if (anchor && anchor != event.target.closest(`.${pane}`)) {
         anchor.lastElementChild.classList.add('hidden');
@@ -33,11 +32,9 @@ function onMouseOver(event) {
 
     // Удаляем класс у текстовой части, что показать ее
     anchor.lastElementChild.classList.remove('hidden');
-    
 }
 
 function onMouseOut(event) {
-
     // Если мышь за пределами какой-либо панели или пришла с неизвестного элемента
     if (!event.target.closest(`.${pane}`) || !event.relatedTarget) {
         return;
@@ -53,11 +50,9 @@ function onMouseOut(event) {
 
     // Текущего элемента больше нет
     anchor = null;
-    
 }
 
 function onMouseMove(event) {
-    
     // Если старт был с панели
     if (event.target.closest(`.${pane}`)) {
         anchor = event.target.closest(`.${pane}`);
@@ -66,7 +61,6 @@ function onMouseMove(event) {
 }
 
 function onClick(event) {
-
     let target = event.target.closest(`.${pane}`);
     
     // Если клик был не по панеле
@@ -88,5 +82,4 @@ function onClick(event) {
     if (target.classList.contains('selected')) {
         toggleHeader(sliderZone);
     }
-
 }

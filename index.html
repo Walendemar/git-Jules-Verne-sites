@@ -7,200 +7,202 @@
     </head>
     <body>
         <div class="wrapper" id="wrapper">
-            <div class="wrapper__intro">
-                <div class="content__intro">
-                    <header class="header" id="header">
-                        <div class="logo">
-                            <div class="logo__img">
-                                <img src="img/new_logo.png">
-                            </div>
-                            <div class="logo__text">
-                                <p>Jules Verne</p>
-                            </div>
+            <div class="wrapper-header">
+                <header class="header" id="header">
+                    <div class="logo">
+                        <div class="logo__img">
+                            <img src="img/new_logo.png">
                         </div>
-                        <nav class="header__nav">
-                            <ul class="header__nav__ul" id="navPanel">
-                                <li>О нас</li>
-                                <li>Каталог</li>
-                                <li>Новинки</li>
-                                <li>Контакты</li>
-                                <li id="liCartImg"><img src="icons/Cart.png" id="iconCart">Корзина</li>
-                            </ul>
-                        </nav>
-                    </header>
-                    <div class="intro">
-                        <div class="intro__textblock">
-                            <p>Воссоздайте мир со страниц книги<br> в своем воображении!</p>
-                            <div class="intro__textblock__line"></div>
-                            <p>Позвольте нам стать вашим верным путеводителем<br> в мир грез</p>
-                        </div>
-                        <div>
-                            <form class="intro__form_input">
-                                <label for="intro__input_area"></label>
-                                <input id="intro__input_area" type="text" placeholder="Введите имя автора или название книги..." class="intro__form_input_textarea">
-                                <button class="intro__form_input_button">НАЙТИ</button>
-                            </form>
+                        <div class="logo__text">
+                            <p>Jules Verne</p>
                         </div>
                     </div>
-                </div>
+                    <nav class="nav">
+                        <ul class="nav__ul" id="navPanel">
+                            <li class="nav__li">О нас</li>
+                            <li class="nav__li">Каталог</li>
+                            <li class="nav__li">Новинки</li>
+                            <li class="nav__li">Контакты</li>
+                            <li class="nav__li" id="liCartImg">
+                                <img src="icons/Cart.png" id="iconCart">
+                                Корзина
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
             </div>
-            <div class="wrapper__main">
+            <div class="wrapper-main">
                 <main class="main">
-                    <div class="wrapper__main__about_us" id="aboutUs">
-                        <section class="main__about_us">
-                            <div class="main__heading">
+                    <div class="wrapper-main__intro">
+                        <section class="main__intro">
+                            <div class="offer">
+                                <p>Воссоздайте мир со страниц книги<br> в своем воображении!</p>
+                                <div class="offer__line"></div>
+                                <p>Позвольте нам стать вашим верным путеводителем<br> в мир грез</p>
+                            </div>
+                            <div>
+                                <form class="form-find">
+                                    <label for="formFindInput"></label>
+                                    <input id="formFindInput" type="text" placeholder="Введите имя автора или название книги..." class="form-find__textarea">
+                                    <button class="form-find__button">НАЙТИ</button>
+                                </form>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="wrapper-main__about-us" id="aboutUs">
+                        <section class="main__about-us">
+                            <div class="block-heading">
                                 <h1 class="h1">Наши преимущества</h1>
                                 <h3 class="h3">Почему стоит выбирать именно нас</h3>
                             </div>
-                            <div class="main__about_us__content">
-                                <div class="main__about_us__content__pane">
-                                    <div class="main__about_us__content__pane__element">
-                                        <div class="main__about_us__content__pane__element__img">
+                            <div class="block-content">
+                                <div class="container-advantages">
+                                    <div class="advantage">
+                                        <div class="advantage__img">
                                             <img src="icons/package.png">
                                         </div>
-                                        <div class="main__about_us__content__pane__element__text">
+                                        <div class="advantage__text">
                                             <span>Быстрая доставка</span>
                                             <p>Посылка в пути меньше<br>недели в любой регион России</p>
                                         </div>
                                     </div>
-                                    <div class="main__about_us__content__pane__element">
-                                        <div class="main__about_us__content__pane__element__img">
+                                    <div class="advantage">
+                                        <div class="advantage__img">
                                             <img src="icons/book.png">
                                         </div>
-                                        <div class="main__about_us__content__pane__element__text">
+                                        <div class="advantage__text">
                                             <span>Огромный ассортимент</span>
                                             <p>Широкий выбор книг от мягкого переплета<br>до коллекционных изданий</p>
                                         </div>
                                     </div>
-                                    <div class="main__about_us__content__pane__element">
-                                        <div class="main__about_us__content__pane__element__img">
+                                    <div class="advantage">
+                                        <div class="advantage__img">
                                             <img src="icons/money_box.png">
                                         </div>
-                                        <div class="main__about_us__content__pane__element__text">
+                                        <div class="advantage__text">
                                             <span>Работа без посредников</span>
                                             <p>Мы работаем напрямую, что делает наши цены<br>одними из самых низких по стране</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="main__about_us__content__img">
+                                <div class="container-picture">
                                     <img src="img/about_us_books.jpg">
                                 <div>
                             </div>
-                            </section>
                         </section>
                     </div>
-                    <div class="wrapper__main__price" id="price">
+                    <div class="wrapper-main__price" id="price">
                         <section class="main__price">
-                            <div class="main__heading">
+                            <div class="block-heading">
                                 <h1 class="h1">Каталог</h1>
                                 <h3 class="h3">Ассортимент наших товаров</h3>
                             </div>
-                            <div class="main__price__content">
-                                <div class="main__price__content__slider" id="sliderPrice">
-                                    <div class="main__price__content__slider__cursor" >
+                            <div class="block-content">
+                                <div class="price-slider" id="sliderPrice">
+                                    <div class="container-cursor" >
                                         <img src="icons/cursor.png" class="cursor" id="sliderCursor">
                                     </div>
-                                    <ul class="main__price__content__slider__zone" id="ulZone">
-                                        <li class="main__price__content__slider__pane">
-                                            <div class="main__price__content__slider__pane__img">
+                                    <ul class="container-slider" id="ulZone">
+                                        <li class="book">
+                                            <div class="book__image">
                                                 <img src="img/book_bear.jpg">
                                             </div>
-                                            <div class="main__price__content__slider__pane__text hidden">
-                                                    <p class="book_name">Название: Медвежий угол</p>
-                                                    <p class="book_author">Автор: Фредрик Бакман</p>
-                                                    <p class="book_annotation">Хоккей в Бьорнстаде - не просто спорт: вокруг него кипят нешуточные страсти,
+                                            <div class="book__text hidden">
+                                                    <p class="book__name">Название: Медвежий угол</p>
+                                                    <p class="book__author">Автор: Фредрик Бакман</p>
+                                                    <p class="book__annotation">Хоккей в Бьорнстаде - не просто спорт: вокруг него кипят нешуточные страсти,
                                                     на нем завязаны все интересы, от него зависит, как...</p>
-                                                    <p class="book_price_name">Цена:</p>
-                                                    <p class="book_price">534 руб.</p>
+                                                    <p class="book__price-name">Цена:</p>
+                                                    <p class="book__price">534 руб.</p>
                                             </div>
                                         </li>
-                                        <li class="main__price__content__slider__pane">
-                                            <div class="main__price__content__slider__pane__img">
+                                        <li class="book">
+                                            <div class="book__image">
                                                 <img src="img/book_vipechka.jpg">
                                             </div>
-                                            <div class="main__price__content__slider__pane__text hidden">
-                                                <p class="book_name">Название: "В" - значит выпечка!</p>
-                                                <p class="book_author">Автор: Анастасия Зурабова</p>
-                                                <p class="book_annotation">Невероятная книга! Ее стоит купить, даже если вы никогда
+                                            <div class="book__text hidden">
+                                                <p class="book__name">Название: "В" - значит выпечка!</p>
+                                                <p class="book__author">Автор: Анастасия Зурабова</p>
+                                                <p class="book__annotation">Невероятная книга! Ее стоит купить, даже если вы никогда
                                                     не увлекались выпечкой...</p>
-                                                <p class="book_price_name">Цена:</p>
-                                                <p class="book_price">650 руб.</p>
+                                                <p class="book__price-name">Цена:</p>
+                                                <p class="book__price">650 руб.</p>
                                             </div>
                                         </li>
-                                        <li class="main__price__content__slider__pane">
-                                            <div class="main__price__content__slider__pane__img">
+                                        <li class="book">
+                                            <div class="book__image">
                                                 <img src="img/book_skazki.jpg">
                                             </div>
-                                            <div class="main__price__content__slider__pane__text hidden">
-                                                <p class="book_name">Название: Сказки Старой Руси</p>
-                                                <p class="book_author">Автор: Роман Папсуев</p>
-                                                <p class="book_annotation">Старые сказки на новый новый лад!
+                                            <div class="book__text hidden">
+                                                <p class="book__name">Название: Сказки Старой Руси</p>
+                                                <p class="book__author">Автор: Роман Папсуев</p>
+                                                <p class="book__annotation">Старые сказки на новый новый лад!
                                                     Потрясающе красивый артбук открывает двери в новую вселенную, основанную
                                                     на славянском фольклоре
                                                 </p>
-                                                <p class="book_price_name">Цена:</p>
-                                                <p class="book_price">1245 руб.</p>
+                                                <p class="book__price-name">Цена:</p>
+                                                <p class="book__price">1245 руб.</p>
                                             </div>
                                         </li>
-                                        <li class="main__price__content__slider__pane">
-                                            <div class="main__price__content__slider__pane__img">
+                                        <li class="book">
+                                            <div class="book__image">
                                                 <img src="img/book_danilevski.jpg">
                                             </div>
-                                            <div class="main__price__content__slider__pane__text hidden">
-                                                <p class="book_name">Название: Княжна Тараканова</p>
-                                                <p class="book_author">Автор: Григорий Данилевский</p>
-                                                <p class="book_annotation">История княжны Таракановой - это всего лишь один из 
+                                            <div class="book__text hidden">
+                                                <p class="book__name">Название: Княжна Тараканова</p>
+                                                <p class="book__author">Автор: Григорий Данилевский</p>
+                                                <p class="book__annotation">История княжны Таракановой - это всего лишь один из 
                                                     эпизодов екатерининской эпохи, но эпизод значимый. Год...
                                                 </p>
-                                                <p class="book_price_name">Цена:</p>
-                                                <p class="book_price">550 руб.</p>
+                                                <p class="book__price-name">Цена:</p>
+                                                <p class="book__price">550 руб.</p>
                                             </div>
                                         </li>
-                                        <li class="main__price__content__slider__pane">
-                                            <div class="main__price__content__slider__pane__img">
+                                        <li class="book">
+                                            <div class="book__image">
                                                 <img src="img/book_tonkoe_iskustvo.jpg">
                                             </div>
-                                            <div class="main__price__content__slider__pane__text hidden">
-                                                <p class="book_name">Название: Всё хреново, книга о надежде</p>
-                                                <p class="book_author">Автор: Марк Мэнсон</p>
-                                                <p class="book_annotation">Никогда еще в человеческой истории мы не жили так хорошо:
+                                            <div class="book__text hidden">
+                                                <p class="book__name">Название: Всё хреново, книга о надежде</p>
+                                                <p class="book__author">Автор: Марк Мэнсон</p>
+                                                <p class="book__annotation">Никогда еще в человеческой истории мы не жили так хорошо:
                                                     победили множество болезней, получили доступ к мировым знаниям...
                                                 </p>
-                                                <p class="book_price_name">Цена:</p>
-                                                <p class="book_price">1000 руб.</p>
+                                                <p class="book__price-name">Цена:</p>
+                                                <p class="book__price">1000 руб.</p>
                                             </div>
                                         </li>
-                                        <li class="main__price__content__slider__pane">
-                                            <div class="main__price__content__slider__pane__img">
+                                        <li class="book">
+                                            <div class="book__image">
                                                 <img src="img/book_neveroiatnaia_grusha.jpg">
                                             </div>
-                                            <div class="main__price__content__slider__pane__text hidden">
-                                                <p class="book_name">Название: Невероятная история о гигантской груше</p>
-                                                <p class="book_author">Автор: Стрид Якоб Мартин</p>
-                                                <p class="book_annotation">Что вас ждет под обложкой: "Эта история берёт своё
+                                            <div class="book__text hidden">
+                                                <p class="book__name">Название: Невероятная история о гигантской груше</p>
+                                                <p class="book__author">Автор: Стрид Якоб Мартин</p>
+                                                <p class="book__annotation">Что вас ждет под обложкой: "Эта история берёт своё
                                                     начало в Сульбю, прекрасном городе на берегу моря...
                                                 </p>
-                                                <p class="book_price_name">Цена:</p>
-                                                <p class="book_price">245 руб.</p>
+                                                <p class="book__price-name">Цена:</p>
+                                                <p class="book__price">245 руб.</p>
                                             </div>
                                         </li>
-                                        <li class="main__price__content__slider__pane">
-                                            <div class="main__price__content__slider__pane__img">
+                                        <li class="book">
+                                            <div class="book__image">
                                                 <img src="img/book_dom_na_crau.jpg">
                                             </div>
-                                            <div class="main__price__content__slider__pane__text hidden">
-                                                <p class="book_name">Название: Дом на краю ночи</p>
-                                                <p class="book_author">Автор: Бэннер Кэтрин</p>
-                                                <p class="book_annotation">Начало ХХ века. Остров Кастелламаре затерялся в Средиземном море,
+                                            <div class="book__text hidden">
+                                                <p class="book__name">Название: Дом на краю ночи</p>
+                                                <p class="book__author">Автор: Бэннер Кэтрин</p>
+                                                <p class="book__annotation">Начало ХХ века. Остров Кастелламаре затерялся в Средиземном море,
                                                     это забытый богом уголок, где так легко
                                                 </p>
-                                                <p class="book_price_name">Цена:</p>
-                                                <p class="book_price">340 руб.</p>
+                                                <p class="book__price-name">Цена:</p>
+                                                <p class="book__price">340 руб.</p>
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="main__price__content__buttons" id="buttonZone">
+                                <div class="container-buttons" id="buttonZone">
                                     <button class="arrow left"><</button>
                                     <button class="button">ДОБАВИТЬ</button>
                                     <button class="arrow right">></button>
@@ -208,130 +210,128 @@
                             </div>
                         </section>
                     </div>
-                    <div class="wrapper__main__finder" id="finder">
-                        <section class="main__finder">
-                            <div class="main__finder__content">
-                                <div class="main__finder__content__text">
-                                    <h1 class="heading">Не нашли нужную вам книгу?</h1>
-                                    <p>Оставьте нам свою заявку!</p>
-                                    <p>Мы работаем со множеством издателей по всей России,</p>
-                                    <p>Нужная Вам книга обязательно найдется</p>
-                                </div>
-                                <form class="main__finder__content__form">
-                                    <div class="main__finder__content__form__input">
-                                        <div class="line">
-                                            <input class="input" type="text" placeholder="Ваше имя" required>
-                                            <input class="input" type="email" placeholder="Ваш e-mail" required>
+                    <div class="wrapper-main__callback" id="finder">
+                        <section class="main__callback">
+                            <div class="block-heading">
+                                <h1 class="h1">Не нашли нужную вам книгу?</h1>
+                                <p>Оставьте нам свою заявку!</p>
+                                <p>Мы работаем со множеством издателей по всей России,</p>
+                                <p>Нужная Вам книга обязательно найдется</p>
+                            </div>
+                            <div class="block-content">
+                                <form class="form-callback">
+                                    <div class="container-input">
+                                        <div class="form-callback__line-textarea">
+                                            <input class="form-callback__input" type="text" placeholder="Ваше имя" required>
+                                            <input class="form-callback__input" type="email" placeholder="Ваш e-mail" required>
                                         </div>
-                                        <div class="line">
-                                            <input class="input" type="text" placeholder="Имя автора" required>
-                                            <input class="input" type="text" placeholder="Название книги" required>
+                                        <div class="form-callback__line-textarea">
+                                            <input class="form-callback__input" type="text" placeholder="Имя автора" required>
+                                            <input class="form-callback__input" type="text" placeholder="Название книги" required>
                                         </div>
+                                    </div>
+                                    <div class="form-callback__container-button">
                                         <button class="button">ОТПРАВИТЬ</button>
                                     </div>
                                 </form>
                             </div>
                         </section>
                     </div>
-                    <div class="wrapper__main__newbook" id="newbook">
+                    <div class="wrapper-main__newbook" id="newbook">
                         <section class="main__newbook">
-                            <div class="main_heading">
+                            <div class="block-heading">
                                 <h1 class="h1">Новинки</h1>
                                 <h3 class="h3">Ассортимент наших товаров</h3>
                             </div>
-                            <div class="main__newbook__slider">
-                                <ul class="main__newbook__slider__ul" id="newbookUl">
-                                    <li class="main__newbook__slider__ul__li">
-                                        <div class="pane">
+                            <div class="block-content">
+                                <ul class="slider-newbook" id="newbookUl">
+                                    <li class="book">
+                                        <div class="book__img">
                                             <img src="img/book_derevo_bruklin.jpg" width="150px" height="200px">
                                         </div>
-                                        <div class="text">
-                                            <p class="book_name">Дерево растет в Бруклине</p>
-                                            <p class="book_author">Бэтти Смит</p>
-                                            <p class="description">Фрэнси Нолан видит мир не таким, как другие - она подмечает
+                                        <div class="book__text">
+                                            <p class="book__name">Дерево растет в Бруклине</p>
+                                            <p class="book__author">Бэтти Смит</p>
+                                            <p class="book__description">Фрэнси Нолан видит мир не таким, как другие - она подмечает
                                             хорошее и плохое, знает, что жизнь полна несправедливости, но
                                             при этом полна добрых людей. Она каждый день ходит в библиотеку
                                             за новой книгой и читает ее сидя на пожарном балконе в тени
-                                            огромного...</p>
-                                            <a class="about" src="/">Подробнее...</a>
-                                            <p>Цена: <span class="book_price">457 руб.</span></p>
+                                            огромного дерева.</p>
+                                            <p>Цена: <span class="book__price">457 руб.</span></p>
                                         </div>
                                     </li>
-                                    <li class="main__newbook__slider__ul__li">
-                                        <div class="pane">
+                                    <li class="book">
+                                        <div class="book__img">
                                             <img src="img/book_begushii.jpg" width="150px" height="200px">
                                         </div>
-                                        <div class="text">
-                                            <p class="book_name">Бегущий за ветром</p>
-                                            <p class="book_author">Халед Хоссейни</p>
-                                            <p class="description">Проникновенная, пробирающая до самого нутра история о дружбе
+                                        <div class="book__text">
+                                            <p class="book__name">Бегущий за ветром</p>
+                                            <p class="book__author">Халед Хоссейни</p>
+                                            <p class="book__description">Проникновенная, пробирающая до самого нутра история о дружбе
                                             и верности, о предательстве и искуплении. Нежный, ироничный и по-хорошему 
                                             сентиментальный, роман Халеда Хоссейни напоминает живописное полотно, которое 
-                                            можно разглядывать...</p>
-                                            <a class="about" src="/">Подробнее...</a>
-                                            <p>Цена: <span class="book_price">811 руб.</span></p>
+                                            можно разглядывать бесконечно.</p>
+                                            <p>Цена: <span class="book__price">811 руб.</span></p>
                                         </div>
                                     </li>
-                                    <li class="main__newbook__slider__ul__li">
-                                        <div class="pane">
+                                    <li class="book">
+                                        <div class="book__img">
                                             <img src="img/book_solovei.jpg" width="150px" height="200px">
                                         </div>
-                                        <div class="text">
-                                            <p class="book_name">Соловей</p>
-                                            <p class="book_author">Ханна Кристин</p>
-                                            <p class="description">Франция, 1939-й. В уютной деревушке Карриво Вианна Мориак
+                                        <div class="book__text">
+                                            <p class="book__name">Соловей</p>
+                                            <p class="book__author">Ханна Кристин</p>
+                                            <p class="book__description">Франция, 1939-й. В уютной деревушке Карриво Вианна Мориак
                                             прощается с мужем, который уходит воевать с немцами. Она не верит, 
-                                            что нацисты вторгнутся во Францию... Но уже вскоре мимо...</p>
-                                            <a class="about" src="/">Подробнее...</a>
-                                            <p>Цена: <span class="book_price">500 руб.</span></p>
+                                            что нацисты вторгнутся во Францию...</p>
+                                            <p>Цена: <span class="book__price">500 руб.</span></p>
                                         </div>
                                     </li>
-                                    <li class="main__newbook__slider__ul__li">
-                                        <div class="pane">
+                                    <li class="book">
+                                        <div class="book__img">
                                             <img src="img/book_wine_folly.jpg" width="150px" height="200px">
                                         </div>
-                                        <div class="text">
-                                            <p class="book_name">Вино. Практический путеводитель</p>
-                                            <p class="book_author">Пакетт Мадлен, Хэммек Джастин</p>
-                                            <p class="description">О вине без снобизма. 
+                                        <div class="book__text">
+                                            <p class="book__name">Вино. Практический путеводитель</p>
+                                            <p class="book__author">Пакетт Мадлен, Хэммек Джастин</p>
+                                            <p class="book__description">О вине без снобизма. 
                                                 Идеальный бумажный путеводитель по вину для эпохи 
-                                                цифровых технологий. Ясный, живой, без излишней заумности</p>
-                                            <a class="about" src="/">Подробнее...</a>
-                                            <p>Цена: <span class="book_price">900 руб.</span></p>
+                                                цифровых технологий. Ясный, живой, без излишней заумности.</p>
+                                            <p>Цена: <span class="book__price">900 руб.</span></p>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="main__newbook__button" id="buttonsPane">
+                            <div class="container-button" id="buttonsPane">
                                 <button class="arrow toleft"><</button>
                                 <button class="button">ДОБАВИТЬ</button>
                                 <button class="arrow toright">></button>
                             </div>
                         </section>
                     </div>
-                    <div class="wrapper__main__contacts" id="contacts">
+                    <div class="wrapper-main__contacts" id="contacts">
                         <section class="main__contacts">
-                            <div class="main_heading">
+                            <div class="block-heading">
                                 <h1 class="h1">Контакты</h1>
                                 <h3 class="h3">Свяжитесь с нами</h3>
                             </div>
-                            <div class="main__contacts__content">
-                                <div class="main__contacts__content__tablet">
+                            <div class="block-content">
+                                <div class="tablet-map">
                                     <img src="img/tablet.png" width="450px" height="300px" class="tablet">
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1354.5228619261495!2d39.68514535817523!3d47.23525149479049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b8fbc88ef9ed%3A0x5b7275804ffd7fe6!2z0KDRj9C30LDQvdGB0LrQuNC5INC_0LXRgC4sIDgxLCDQoNC-0YHRgtC-0LIt0L3QsC3QlNC-0L3Rgywg0KDQvtGB0YLQvtCy0YHQutCw0Y8g0L7QsdC7LiwgMzQ0MDEz!5e0!3m2!1sru!2sru!4v1610617699905!5m2!1sru!2sru" width="352px" height="267.5px" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                                 </div>
-                                <div class="main__contacts__content__text">
-                                    <div class="text_section">
-                                        <p class="orange_font">Адрес:</p>
+                                <div class="contact-information">
+                                    <div class="contact-information__element">
+                                        <p class="contact-information__element_font-orange">Адрес:</p>
                                         <p>Октябрьский р-н, Ростов-на-Дону,</p>
                                         <p>Ростовская обл., Рязанский пер., 81-49</p>
                                     </div>
-                                    <div class="text_section">
-                                        <p class="orange_font">E-mail:</p>
+                                    <div class="contact-information__element">
+                                        <p class="contact-information__element_font-orange">E-mail:</p>
                                         <p>JulesVerneBookShop@gmail.com</p>
                                     </div>
-                                    <div class="text_section">
-                                        <p class="orange_font">Телефон:</p>
+                                    <div class="contact-information__element">
+                                        <p class="contact-information__element_font-orange">Телефон:</p>
                                         <p>+7(980)446-96-81</p>
                                         <p>+7(980)671-43-54</p>
                                     </div>
@@ -341,7 +341,7 @@
                     </div>
                 </main>
             </div>
-                <div class="wrapper__footer">
+            <div class="wrapper-footer">
                 <footer class="footer">
                     <div class="logo">
                         <div class="logo__img">
@@ -351,18 +351,18 @@
                             <p>Jules Verne</p>
                         </div>
                     </div>
-                    <div class="footer__social">
-                        <div class="footer__social__text">
+                    <div class="social">
+                        <div class="social__text">
                             <p class="text">Присоединяйтесь к нам в соцсетях</p>
                         </div>
-                        <div class="footer__social__icons">
+                        <div class="social__icons">
                             <a href="http://facebook.com"><img class="img" src="icons/facebook.png"></a>
                             <a href="http://twitter.com"><img class="img" src="icons/twitter.png"></a>
                             <a href="http://google.com"><img class="img" src="icons/google_plus.png"></a>
                         </div>
                     </div>
                     <div class="footer__button" id="upButton">
-                        <button class="up_button"><p>^</p></button>
+                        <button class="up-button"><p>^</p></button>
                     </div>
                 </footer>
             </div>

@@ -11,7 +11,6 @@ let position = 0;
 let elementCount = ul.querySelectorAll('li').length;
 
 function onClick(event) {
-
     // Проверяем, было ли нажатие на кнопку-стрелку или "добавить"
     if (!event.target.closest('button')) {
         return;

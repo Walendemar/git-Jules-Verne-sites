@@ -1,18 +1,16 @@
 let navPanel = document.getElementById('navPanel');
 
-// Все переменные
-
 // Добавляем обработчик на меню
 navPanel.addEventListener("click", scrollMenu);
 
 function scrollMenu(event) {
-
     // ID таймера
     let timerId;
 
     // Позиция секции
     let position;
     let scrollY = window.scrollY;
+    
     // Для каждого элемента вызываем функцию и передаем туда параметры
     switch(event.target) {
         case navPanel.children[0]:

@@ -45,20 +45,20 @@ function showShoppingCart(event) {
     h1.innerHTML = "Корзина";
     h1.classList.add('h1');
     heading.append(h1);
-    heading.classList.add('shop__heading');
+    heading.classList.add('block-heading');
 
     // Div и содержащийся внутри ul
     contentListDiv = document.createElement('div');
-    contentListDiv.classList.add('shop__content__list');
+    contentListDiv.classList.add('block-content__list');
     let ul = document.createElement('ul');
     contentListDiv.append(ul);
 
     // Div-блок с информацией о покупке
     contentPriceDiv = document.createElement('div');
-    contentPriceDiv.classList.add('shop__content__price');
+    contentPriceDiv.classList.add('block-content__price');
 
     // Добавление в div с контентом
-    contentDiv.classList.add('shop__content');
+    contentDiv.classList.add('block-content');
     contentDiv.append(contentListDiv);
     contentDiv.append(contentPriceDiv);
 
@@ -69,7 +69,7 @@ function showShoppingCart(event) {
     let buyButton = document.createElement('button');
     buyButton.innerHTML = "КУПИТЬ";
     buyButton.classList.add('button');
-    buttonDiv.classList.add('shop__button');
+    buttonDiv.classList.add('container-button');
     buttonDiv.append(buyButton);
     
     // Итоговая цена
@@ -89,22 +89,22 @@ function showShoppingCart(event) {
         let img = document.createElement('img');
         img.src = element.querySelector('img').src;
 
-        imgDiv.classList.add('shop__content__list__element__img_container');
+        imgDiv.classList.add('block-content__container-image');
         imgDiv.append(img);
 
-        let name = element.querySelector('.book_name').textContent;
-        let author = element.querySelector('.book_author').textContent;
-        let value = element.querySelector('.book_price').textContent;
+        let name = element.querySelector('.book__name').textContent;
+        let author = element.querySelector('.book__author').textContent;
+        let value = element.querySelector('.book__price').textContent;
 
-        textDiv.classList.add('shop__content__list__element__text_container');
+        textDiv.classList.add('block-content__container-text');
         textDiv.innerHTML = `<p>${name}</p>
                              <p>${author}</p>
                              <p>Цена: <span class="cost">${value}</span></p>`;
 
         deletePanelButton.innerHTML = 'X';
-        deletePanelButton.classList.add('close_button');
+        deletePanelButton.classList.add('close-button');
 
-        li.classList.add('shop__content__list__element');
+        li.classList.add('block-content__element');
         li.append(imgDiv);
         li.append(textDiv);
         li.append(deletePanelButton);
@@ -165,7 +165,7 @@ function showShoppingCart(event) {
     insertCommission();
 
     // Добавление кнопки закрытия меню
-    closeButton.classList.add('close_frame');
+    closeButton.classList.add('close-frame');
     closeButton.innerHTML = "X";
     frame.append(closeButton);
 
@@ -177,7 +177,7 @@ function showShoppingCart(event) {
     closeButton.addEventListener('click', function() {
         frame.remove();
         document.body.style.overflow = "";
-        div.classList.remove('show_background');
+        div.classList.remove('show-background');
     });
 
     // Позиционирование фрейма
@@ -191,7 +191,7 @@ function showShoppingCart(event) {
         }
         
         // Панель, которую нужно закрыть
-        let pane = event.target.closest('.shop__content__list__element');
+        let pane = event.target.closest('.block-content__element');
 
         // Вычитание стоимости товара из общей суммы
         let value = pane.querySelector('span')

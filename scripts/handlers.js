@@ -50,7 +50,6 @@ function scrollTo(timerId, position, speed) {
 
 // Функция-парсер, принимающая строку, обрабатывающая ее и возвращающая массив слов
 function parse(string) {
-
     string = string.toLowerCase();
 
     let array = string.split(' ');
@@ -64,7 +63,6 @@ function parse(string) {
 
 // Функция для показа/скрытия хедера
 function toggleHeader(zoneElement) {
-
     let header = document.getElementById('header');
 
     // Виден ли хедер на своем стандартном месте
@@ -73,7 +71,7 @@ function toggleHeader(zoneElement) {
     }
 
     // Проверка, был ли хедер уже показан
-    if (header.classList.contains('show_header')) {
+    if (header.classList.contains('show-header')) {
         return;
     }
 
@@ -106,14 +104,14 @@ function toggleHeader(zoneElement) {
     // Функция, показывающая хедер
     function showHeader() {
         header.before(bung);
-        header.classList.add('show_header');
+        header.classList.add('show-header');
         setTimeout(() => header.style.marginTop = 80 + 'px', 100);
     }
 
     // Функция, скрывающая хедер
     function hideHeader() {
         header.style.marginTop = 0;
-        setTimeout(() => header.classList.remove('show_header'), 400);
+        setTimeout(() => header.classList.remove('show-header'), 400);
         setTimeout(() => bung.remove(), 400);
     }
 

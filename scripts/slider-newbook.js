@@ -15,9 +15,8 @@ buttonsPane.addEventListener('click', buttonClick);
 
 // Функция для обработчика newbookUl
 function ulClick(event) {
-
     // Текущий div с картинкой
-    let div = event.target.closest('.pane');
+    let div = event.target.closest('.book__img');
 
     // Если клик не по панеле с картинкой
     if  (!div) {
@@ -31,7 +30,7 @@ function ulClick(event) {
     switchText(div.classList.contains('selected'), buttonsPane.querySelector('.button'));
 
     // Выделение li как выбранного
-    event.target.closest('.main__newbook__slider__ul__li').classList.toggle('selected');
+    event.target.closest('.book').classList.toggle('selected');
 
     // Показать/убрать хедер
     if (div.classList.contains('selected')) {
@@ -41,7 +40,6 @@ function ulClick(event) {
 
 // Функция для обработчика buttonsPane
 function buttonClick(event) {
-
     // Текущий div с картинкой
     let div = newbookUl.children[panePosition].children[0];
     // Кнопка "Добавить"
@@ -67,7 +65,7 @@ function buttonClick(event) {
         // Добавляю div'у с картинкой класс, меняющий подсветку и рамки
         div.classList.toggle('selected');
         // Выделение li как выбранного
-        div.closest('.main__newbook__slider__ul__li').classList.toggle('selected');
+        div.closest('.book').classList.toggle('selected');
         // Меняю текст кнопки
         switchText(div.classList.contains('selected'), button);
         // Показать/убрать хедер
@@ -78,7 +76,6 @@ function buttonClick(event) {
 
     // Двигаем слайдер
     newbookUl.style.marginLeft = -panePosition * 840 + 'px';
-
 }
 
 
