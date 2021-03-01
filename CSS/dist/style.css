@@ -590,17 +590,17 @@ button:hover {
   font-size: 13px;
   color: white;
 }
-.main__price .block-content .price-slider .book__text .book_author {
+.main__price .block-content .price-slider .book__text .book__author {
   padding-top: 8px;
 }
-.main__price .block-content .price-slider .book__text .book_annotation {
+.main__price .block-content .price-slider .book__text .book__annotation {
   padding-top: 8px;
 }
-.main__price .block-content .price-slider .book__text .book_price-name {
+.main__price .block-content .price-slider .book__text .book__price-name {
   padding-top: 20px;
   float: left;
 }
-.main__price .block-content .price-slider .book__text .book_price {
+.main__price .block-content .price-slider .book__text .book__price {
   padding-top: 20px;
   color: #fe9200;
   float: right;

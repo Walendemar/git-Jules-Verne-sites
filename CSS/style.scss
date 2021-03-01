@@ -549,7 +549,6 @@ button {
                 overflow: hidden;
 
                 .container-cursor {
-
                     display: flex;
                     justify-content: center;
                     margin-top: 20px;
@@ -581,7 +580,6 @@ button {
                 }
 
                 .book {
-
                     display: block;
                     position: relative;
                     overflow: hidden;
@@ -608,7 +606,6 @@ button {
                     }
 
                     &__text {
-
                         display: block;
                         position: absolute;
                         width: 100%;
@@ -626,20 +623,20 @@ button {
                             color: white;
                         }
 
-                        .book_author {
+                        .book__author {
                             padding-top: 8px;
                         }
 
-                        .book_annotation {
+                        .book__annotation {
                             padding-top: 8px;
                         }
 
-                        .book_price-name {
+                        .book__price-name {
                             padding-top: 20px;
                             float: left;
                         }
 
-                        .book_price {
+                        .book__price {
                             padding-top: 20px;
                             color: rgb(254, 146, 0);
                             float: right;
