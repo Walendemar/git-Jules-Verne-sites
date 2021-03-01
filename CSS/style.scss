@@ -932,11 +932,9 @@ button {
 
 @media (max-width: 1000px) {
     .shop {
-
         width: 900px;
 
-        &__content {
-
+        .block-content {
             min-width: 800px;
 
             &__list {
@@ -947,9 +945,5 @@ button {
                 min-width: 200px;
             }
         }
-    }
-
-    .frame {
-
     }
 }

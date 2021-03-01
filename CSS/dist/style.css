@@ -832,13 +832,13 @@ button:hover {
   .shop {
     width: 900px;
   }
-  .shop__content {
+  .shop .block-content {
     min-width: 800px;
   }
-  .shop__content__list {
+  .shop .block-content__list {
     min-width: 380px;
   }
-  .shop__content__price {
+  .shop .block-content__price {
     min-width: 200px;
   }
 }
