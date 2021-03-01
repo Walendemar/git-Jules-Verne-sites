@@ -914,11 +914,9 @@ button {
         .up-button {
             width: 42px;
             height: 42px;
+            padding-top: 9px;
+            font-size: 30px;
             background-color: rgb(255, 255, 255);
-        
-            p {
-                font-size: 30px;
-            }
         }
     }
 }

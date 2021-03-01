@@ -822,10 +822,9 @@ button:hover {
 .footer__button .up-button {
   width: 42px;
   height: 42px;
-  background-color: white;
-}
-.footer__button .up-button p {
+  padding-top: 9px;
   font-size: 30px;
+  background-color: white;
 }
 
 @media (max-width: 1000px) {
