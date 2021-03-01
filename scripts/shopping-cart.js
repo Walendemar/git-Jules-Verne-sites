@@ -26,7 +26,7 @@ function showShoppingCart(event) {
     let wrapper = document.getElementById('wrapper');
 
     // Затемнение экрана
-    div.classList.add('show_background');
+    div.classList.add('show-background');
     wrapper.before(div); 
 
     // Создание модального окна
@@ -224,14 +224,12 @@ function showShoppingCart(event) {
 
     // Поиск и снятие выделения с удаленных из корзины элементов
     function toggleSelected(element) {
-
         element.classList.remove('selected');
 
         // Если элемент из первого слайдера
-        let price = element.closest('.main__price__content');
+        let price = element.closest('.main__price');
 
         if (price) {
-            let cursor = document.getElementById('sliderCursor');
             let ul = price.querySelector('ul');
 
             // Проверка, является ли этот элемент текущим
@@ -247,12 +245,12 @@ function showShoppingCart(event) {
 
         // Если элемент из второго слайдера
         let newbook = element.closest('.main__newbook');
-        
+
         if (newbook) {
             let ul = newbook.querySelector('ul');
 
             // Удаление подсветки у изображения
-            element.querySelector('.pane').classList.remove('selected');
+            element.querySelector('.book__img').classList.remove('selected');
 
             // Проверка, является ли этот элемент текущим
             let condition = (element == ul.children[panePosition]);
