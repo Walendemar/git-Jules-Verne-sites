@@ -425,10 +425,10 @@ button:hover {
   align-items: center;
   max-width: 750px;
   line-height: 1.5;
+  color: white;
 }
 .main__intro .offer p {
   text-align: center;
-  color: white;
   font-weight: bold;
   line-height: 1.85em;
 }
