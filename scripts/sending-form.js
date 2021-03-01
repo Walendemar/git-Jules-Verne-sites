@@ -25,7 +25,7 @@ function submit(event) {
         let button = document.createElement('button');
 
         // Затемнение экрана
-        div.classList.add('show_background');
+        div.classList.add('show-background');
         wrapper.before(div);   
 
         // Создание окна
