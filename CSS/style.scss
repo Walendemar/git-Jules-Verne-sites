@@ -211,7 +211,6 @@ button {
     z-index: 9999;
 }
 
-// TODO: rename to "callback"
 .frame {
     display: flex;
     flex-direction: column;
@@ -287,7 +286,6 @@ button {
 
     &-header {
         display: flex;
-        //position: absolute;
         justify-content: center;
         max-height: 200px;
         max-width: 1440px;
